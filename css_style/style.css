@@ -260,7 +260,7 @@ body {
     margin-top: 9px;
   }
   .green-tariff {
-    height: 965px;
+    height: 960px;
   }
   .container-green-tariff {
     display: flex;
@@ -396,4 +396,79 @@ body {
   }
   .text-quote {
     width: 35%;
+  }
+  .img-clients {
+    background-image: url(/images/Rectangle11.jpg);
+    width: 439px;
+    height: 347px;
+  }
+  .clients {
+    height: 659px;
+  }
+  .container-clients {
+    display: flex;
+    flex-direction: column;
+    height: 495px;
+    gap: 47px;
+    width: 66%;
+    margin-top: 19px;
+  }
+  .info-client {
+    margin-top: 51px;
+    gap: 6px;
+  }
+  .slider {
+    display: flex;
+    gap: 153px;
+  }
+  body.dark-theme .consultation-btn {
+    display: block;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    transition: background 0.5s ease-in-out;
+    position: relative;
+  }
+  body.dark-theme .consultation-btn::after {
+    display: inline-block;
+    content: url(/images/Arrow3.svg);
+    padding: 40px 0 0 27px;
+  }
+  .consultation-btn {
+    display: block;
+    color: #303030;
+    border: 2px solid #303030;
+    border-radius: 50%;
+    width: 94px;
+    height: 100px;
+    transition: background 0.5s ease-in-out;
+    position: relative;
+  }
+  .consultation-btn::after {
+    display: inline-block;
+    content: url(/images/Arrow1.svg);
+    padding: 40px 0 0 27px;
+  }
+  .consultation-btn:hover {
+    background: #a9a32a;
+  }
+  .consultation-black {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+  .container-cleints-pignation {
+    gap: 39px;
+    margin-top: 15px;
+  }
+  .info-clients
+  {
+    width: 77%;
+  }
+  .location
+  {
+    height: 38px;
   }

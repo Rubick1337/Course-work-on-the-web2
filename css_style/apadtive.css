@@ -50,5 +50,19 @@
     {
         height: 1492px;
     }
+    .container-clients
+    {
+        width: 89%;
+    }
+    .img-clients
+    {
+        width: 319px;
+        height: 347px;
+    }
+    .consultation-btn::after
+    {
+        padding: 40px 0 0 19px;
+    }
+
   }
   
