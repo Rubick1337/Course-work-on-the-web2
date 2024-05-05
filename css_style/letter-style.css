@@ -1,0 +1,62 @@
+h1,
+h2,
+h3,
+h4 {
+  margin-block: 0;
+}
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6 {
+  color: #fff;
+}
+body.dark-theme .tab label {
+  color: #fff;
+}
+.navigation a {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  text-decoration: none;
+}
+.Text-header h3 {
+  color: #ffffff;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 19px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.Text-header h1 {
+  color: #fff;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.Text-header h2 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.consultation h2 {
+  color: #ffffff;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
