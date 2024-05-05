@@ -60,3 +60,27 @@ body.dark-theme .tab label {
   font-weight: 400;
   line-height: normal;
 }
+.title-services h2 {
+    color: #868585;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .text-1 h2 {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .text-1 h3 {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }

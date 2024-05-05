@@ -217,3 +217,41 @@ body {
     top: 49%;
     transform: translate(-50%, -50%);
 }
+.img-services {
+    background-image: url(/images/Rectangle7.jpg);
+    width: 600px;
+    height: 610px;
+  }
+  .text-1 {
+    width: 94.805%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  .services {
+    height: 841px;
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-services {
+    display: flex;
+    width: 79.45%;
+    gap: 59px;
+  }
+  .container-description
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+  .right-container-services {
+    display: flex;
+    justify-content: center;
+  }
+  .title-services
+  {
+    margin-top: 9px;
+  }
