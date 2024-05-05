@@ -60,7 +60,7 @@ body.dark-theme .tab label {
   font-weight: 400;
   line-height: normal;
 }
-.title-services h2 {
+.title-services h2 , .title-green h2 {
     color: #868585;
     font-family: "Noto Sans", sans-serif;
     font-size: 24px;
@@ -82,5 +82,45 @@ body.dark-theme .tab label {
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
+    line-height: normal;
+  }
+  .tab label {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .text-slider h2 {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .text-info h2 {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .text-info h3 {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .text-right-green {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
     line-height: normal;
   }

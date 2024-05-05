@@ -11,7 +11,10 @@ body {
   body.dark-theme a {
     color: #fff;
   }
-  
+  .flex-direction {
+    display: flex;
+    flex-direction: column;
+  }
   .buttons {
     display: flex;
     align-items: center;
@@ -256,4 +259,133 @@ body {
   {
     margin-top: 9px;
   }
+  .green-tariff {
+    height: 965px;
+  }
+  .container-green-tariff {
+    display: flex;
+    width: 1200px;
+    gap: 142px; 
+  }
+  .tab
+  {
+    display: flex;
+    gap: 83.5px;
+  }
+  .tab label {
+    padding-top: 0.5rem;
+    padding-bottom: 0.3rem;
+    cursor: pointer;
+    transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    color: #212529;
+    background: 0 0;
+    border-bottom: 0.125rem solid transparent;
+  }
   
+  .tab label:hover {
+    border-bottom-color: #0d6efd;
+  }
+  body.dark-theme .tab input[type="radio"]:checked + label {
+    cursor: default;
+    color: #fff;
+    border-bottom-color: #fff;
+  }
+  
+  .tab input[type="radio"]:checked + label {
+    cursor: default;
+    color: #212529;
+    border-bottom-color: #212529;
+  }
+  
+  .tab input[type="radio"] {
+    display: none;
+  }
+  #description-1{
+    display: block;
+  }
+  .description {
+    display: none;
+  }
+  .slider-tarrif {
+    display: flex;
+    gap: 19px;
+}
+  .img-slider-tarrif {
+    background-image: url(/images/Rectangle9.jpg);
+    height: 118px;
+    width: 230px;
+  }
+  .left-carret {
+    background-image: url(/images/Arrow2.svg);
+    width: 40px;
+    height: 7px;
+  }
+  .right-carret {
+    background-image: url(/images/Arrow1.svg);
+    width: 40px;
+    height: 7px;
+  }
+  .left-slider-green {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+}
+  body.dark-theme .right-carret {
+    background-image: url(/images/Arrow3.svg);
+  }
+  body.dark-theme .left-carret {
+    background-image: url(/images/Arrow4.svg);
+  }
+  .pignation-slider {
+    display: flex;
+    gap: 22px;
+    justify-content: center;
+  }
+  .block-info {
+    gap: 11px;
+    margin-top: 48px;
+  }
+  .text-info {
+    gap: 8px;
+    width: 100.5%;
+  }
+  .block-1 {
+    display: flex;
+    gap: 41px;
+  }
+  .block-2 {
+    display: flex;
+    gap: 40px;
+  }
+  .img-green-tarif {
+    background-image: url(/images/Rectangle8.jpg);
+    width: 600px;
+    height: 525px;
+  }
+  .container-green-tariff .right {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+  }
+  .container-tariff {
+    display: flex;
+    gap: 89px;
+  }
+  .container-description-green
+  {
+    display: flex;
+    width: 498px;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .text-right-green
+  {
+    width: 100%;
+  }
+  .rigth-green{
+    gap: 31px;
+  }
+  .text-slider
+  {
+    width: 106%;
+  }
