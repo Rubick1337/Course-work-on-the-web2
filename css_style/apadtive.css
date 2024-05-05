@@ -1,0 +1,21 @@
+@media screen and (max-width: 1408px) {
+    .container-services {
+      width: 94.45%;
+    }
+  }
+  
+  @media screen and (max-width: 1187px) {
+    .container-services {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+    }   
+    .services
+    {
+        height: 1380px;
+    }
+    .container-description {
+      width: 590px;
+    }
+  }

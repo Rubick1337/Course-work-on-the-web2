@@ -229,7 +229,7 @@ body {
     gap: 22px;
   }
   .services {
-    height: 841px;
+    height: 822px;
   }
   .center {
     display: flex;
@@ -250,8 +250,10 @@ body {
   .right-container-services {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   .title-services
   {
     margin-top: 9px;
   }
+  
