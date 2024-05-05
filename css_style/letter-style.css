@@ -124,3 +124,12 @@ body.dark-theme .tab label {
     font-weight: 700;
     line-height: normal;
   }
+  .text-quote h2 {
+    color: #fff;
+    text-align: center;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }

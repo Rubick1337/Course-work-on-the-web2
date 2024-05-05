@@ -389,3 +389,11 @@ body {
   {
     width: 106%;
   }
+  .quote {
+    background-image: url(/images/Rectangle10.jpg);
+    height: 327px;
+    width: 100%;
+  }
+  .text-quote {
+    width: 35%;
+  }
