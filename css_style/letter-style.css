@@ -52,7 +52,7 @@ body.dark-theme .tab label {
   font-weight: 400;
   line-height: normal;
 }
-.consultation h2 {
+.consultation h2, .consultation-footer h2 {
   color: #ffffff;
   font-family: "Noto Sans", sans-serif;
   font-size: 19px;
@@ -222,4 +222,13 @@ line-height: normal;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.after-application h3
+{
+  color: #FFF;
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
