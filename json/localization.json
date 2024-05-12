@@ -160,7 +160,7 @@
         "ru": "Больше примеров наших клиентов"
       },"five_steps_title": {
         "en": "5 STEPS TO YOUR OWN SOLAR POWER PLANT",
-        "ru": "5 ШАГОВ К СОБСТВЕННОЙ ЭЛЕКТРОСТАНЦИИ"
+        "ru": "5 ШАГОВ К СОБСТВЕННОЙ<br> ЭЛЕКТРОСТАНЦИИ"
       },
       "step_1_title": {
         "en": "Application or Call",
@@ -248,6 +248,6 @@
         },
         "privacy_policy": {
           "en": "Privacy Policy:",
-          "ru": "Политика конфиденциальности:"
+          "ru": "Политика <br> конфиденциальности:"
         }
   }
