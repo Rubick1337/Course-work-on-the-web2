@@ -584,10 +584,14 @@ body.dark-theme .line-section {
 
 .form-group label {
   position: absolute;
-  top: -8px;
+  top: -13px;
   left: 0;
+  transition: top 0.3s, font-size 0.3s;
 }
 
+.form-group input:focus + label {
+  top: -30px;
+}
 .form-group input[type="text"],
 .form-group input[type="tel"] {
   border: none;
