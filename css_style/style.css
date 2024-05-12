@@ -78,7 +78,7 @@ body {
   .dropbtn {
     width: 73px;
     height: 24px;
-    background-image: url(/images/Russia-Flag-icon.png);
+    background-image: url(../images/Russia-Flag-icon.png);
     background-repeat: no-repeat;
     cursor: pointer;
     position: relative;
@@ -87,7 +87,7 @@ body {
   }
   .dropbtn::after {
     content: "";
-    background: rgba(0, 0, 0, 0) url(/images/745173.png);
+    background: rgba(0, 0, 0, 0) url(../images/745173.png);
     background-repeat: no-repeat;
     background-position: center center;
     position: absolute;
@@ -112,16 +112,16 @@ body {
     cursor: pointer;
   }
   .dropdown-content button:first-child {
-    background: url(/images/Russia-Flag-icon.png) no-repeat left center;
+    background: url(../images/Russia-Flag-icon.png) no-repeat left center;
   }
   .dropdown-content button:last-child {
-    background: url(/images/flag-usa-icon.png) no-repeat left center;
+    background: url(../images/flag-usa-icon.png) no-repeat left center;
   }
   .header-container {
     position: relative;
     height: 1016px;
     width: 100%;
-    background-image: url(/images/фон.jpg);
+    background-image: url(../images/фон.jpg);
   }
   .background-settings {
     background-position: center center;
@@ -132,12 +132,12 @@ body {
     margin-right: 20px;
     width: 48px;
     height: 48px;
-    background-image: url(/images/icon_profile.svg);
+    background-image: url(../images/icon_profile.svg);
   }
   .img-logo {
     width: 182px;
     height: 51px;
-    background-image: url(/images/лого1.svg);
+    background-image: url(../images/лого1.svg);
   }
   .menu {
     width: 100%;
@@ -180,7 +180,7 @@ body {
   }
   .header-btn::after {
     display: inline-block;
-    content: url(/images/Arrow3.svg);
+    content: url(../images/Arrow3.svg);
     padding: 40px 0 0 27px;
   }
   .header-btn:hover {
@@ -189,22 +189,22 @@ body {
   .instagram-img {
     width: 29.52px;
     height: 32.36px;
-    background-image: url(/images/instagram.svg);
+    background-image: url(../images/instagram.svg);
   }
   .telegram-img {
     width: 30px;
     height: 24.12px;
-    background-image: url(/images/telegram.svg);
+    background-image: url(../images/telegram.svg);
   }
   .whats-up-img {
     width: 29.52px;
     height: 32.36px;
-    background-image: url(/images/whatsapp.svg);
+    background-image: url(../images/whatsapp.svg);
   }
   .facebook-img {
     width: 17px;
     height: 32.88px;
-    background-image: url(/images/facebook.svg);
+    background-image: url(../images/facebook.svg);
   }
   .container-social {
     display: flex;
@@ -221,7 +221,7 @@ body {
     transform: translate(-50%, -50%);
 }
 .img-services {
-    background-image: url(/images/Rectangle7.jpg);
+    background-image: url(../images/Rectangle7.jpg);
     width: 600px;
     height: 610px;
   }
@@ -264,8 +264,10 @@ body {
   }
   .container-green-tariff {
     display: flex;
-    width: 1200px;
-    gap: 142px; 
+    width: 100%;
+    gap: 114px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .tab
   {
@@ -311,17 +313,17 @@ body {
     gap: 19px;
 }
   .img-slider-tarrif {
-    background-image: url(/images/Rectangle9.jpg);
+    background-image: url(../images/Rectangle9.jpg);
     height: 118px;
     width: 230px;
   }
   .left-carret {
-    background-image: url(/images/Arrow2.svg);
+    background-image: url(../images/Arrow2.svg);
     width: 40px;
     height: 7px;
   }
   .right-carret {
-    background-image: url(/images/Arrow1.svg);
+    background-image: url(../images/Arrow1.svg);
     width: 40px;
     height: 7px;
   }
@@ -331,10 +333,10 @@ body {
     gap: 29px;
 }
   body.dark-theme .right-carret {
-    background-image: url(/images/Arrow3.svg);
+    background-image: url(../images/Arrow3.svg);
   }
   body.dark-theme .left-carret {
-    background-image: url(/images/Arrow4.svg);
+    background-image: url(../images/Arrow4.svg);
   }
   .pignation-slider {
     display: flex;
@@ -358,7 +360,7 @@ body {
     gap: 40px;
   }
   .img-green-tarif {
-    background-image: url(/images/Rectangle8.jpg);
+    background-image: url(../images/Rectangle8.jpg);
     width: 600px;
     height: 525px;
   }
@@ -380,7 +382,8 @@ body {
   }
   .text-right-green
   {
-    width: 100%;
+    max-width: 600px;
+    min-width: 600px;
   }
   .rigth-green{
     gap: 31px;
@@ -390,15 +393,15 @@ body {
     width: 106%;
   }
   .quote {
-    background-image: url(/images/Rectangle10.jpg);
+    background-image: url(../images/Rectangle10.jpg);
     height: 327px;
     width: 100%;
   }
   .text-quote {
-    width: 35%;
+    width: 90%;
   }
   .img-clients {
-    background-image: url(/images/Rectangle11.jpg);
+    background-image: url(../images/Rectangle11.jpg);
     width: 439px;
     height: 347px;
   }
@@ -433,7 +436,7 @@ body {
   }
   body.dark-theme .consultation-btn::after {
     display: inline-block;
-    content: url(/images/Arrow3.svg);
+    content: url(../images/Arrow3.svg);
     padding: 40px 0 0 27px;
   }
   .consultation-btn {
@@ -445,10 +448,11 @@ body {
     height: 100px;
     transition: background 0.5s ease-in-out;
     position: relative;
+    flex-shrink: 0;
   }
   .consultation-btn::after {
     display: inline-block;
-    content: url(/images/Arrow1.svg);
+    content: url(../images/Arrow1.svg);
     padding: 40px 0 0 27px;
   }
   .consultation-btn:hover {
@@ -472,3 +476,38 @@ body {
   {
     height: 38px;
   }
+  .img-steps {
+    background-image: url(/images/Rectangle12.png);
+    width: 573px;
+    height: 604px;
+  }
+  .container-step {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  .text-1-steps {
+    width: 87%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .five-steps
+  {
+    height: 956px;
+  }
+  .title-steps
+{
+  margin-top: 9px;
+}
+  .left-steps {
+    height: 746px;
+    width: 31.5%;
+    gap: 78px;
+  }
+.info-block-steps
+{
+  display: flex;
+  flex-direction: column;
+  gap: 41px;
+}

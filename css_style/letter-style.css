@@ -60,7 +60,7 @@ body.dark-theme .tab label {
   font-weight: 400;
   line-height: normal;
 }
-.title-services h2 , .title-green h2,.title-clients h2 {
+.title-services h2 , .title-green h2,.title-clients h2, .title-steps h2{
     color: #868585;
     font-family: "Noto Sans", sans-serif;
     font-size: 24px;
@@ -153,6 +153,30 @@ body.dark-theme .tab label {
     color: black;
     font-family: "Noto Sans", sans-serif;
     font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .text-1-steps h4 {
+    color: #868585;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .text-1-steps h2 {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .text-1-steps h3 {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
