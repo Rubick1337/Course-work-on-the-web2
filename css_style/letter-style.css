@@ -181,3 +181,45 @@ body.dark-theme .tab label {
     font-weight: 400;
     line-height: normal;
   }
+  .form-group label[for="phone"],.form-group label[for="name"] {
+    color:#FFF;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.title-application h2
+{
+color:  #FFF;
+font-family: "Noto Sans", sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.text-contacts h2 {
+  color: #100;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.text-contacts a {
+  color: #100;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+.telephone h2 {
+  color: #100;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
