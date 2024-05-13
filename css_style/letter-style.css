@@ -232,3 +232,39 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
+#registration-form label {
+  color: #ffffff;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#registration-form span
+{
+  color: #f40808;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.registration h1
+{
+  color: #ffffff;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#registration-form input
+{
+  color: #100;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
