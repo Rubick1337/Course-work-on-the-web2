@@ -249,5 +249,13 @@
         "privacy_policy": {
           "en": "Privacy Policy:",
           "ru": "Политика <br> конфиденциальности:"
+        },
+        "sale-text": {
+          "ru": "Оставьте заявку на солнечные панели с 30% скидкой!",
+          "en": "Submit an application for solar panels with a 30% discount!"
+        },
+        "information-text": {
+          "ru": "Здесь можно разместить форму заявки или дополнительную информацию.",
+          "en": "You can place a form or additional information here."
         }
   }
