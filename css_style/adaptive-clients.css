@@ -198,7 +198,7 @@
             .after-application
             {
                 flex-direction: column;
-                margin-left: 40px;
+                width: 88%;
             }
             .container-social-footer
             {
@@ -236,5 +236,6 @@
             {
                 gap: 145px; 
             }
+            
           }
     }
