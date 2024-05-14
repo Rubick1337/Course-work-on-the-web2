@@ -60,9 +60,7 @@ function validateForm() {
   });
     if (existingUser) {
       console.log("занят");
-      return {
-        invalidmailhard: true,
-      };
+        invalidmailhard = true;
     }
 
   // Проверка номера телефона
@@ -133,10 +131,7 @@ function validateForm() {
 
   if (existingNickname) {
     console.log("занят");
-    return {
-
-      invalidnicknamehard: true,
-    };
+      invalidnicknamehard = true;
   }
 
   if (arrayError.length !== 0) {
@@ -151,18 +146,19 @@ function validateForm() {
     const firstnameError = document.querySelector('#firstnameError');
     const lastnameError = document.querySelector('#lastnameError');
     const nicknameError = document.querySelector('#nicknameError');
-
+    console.log(invalidmail)
+    console.log(invalidmailhard)
+    var errorMessagemail = "";
     if (invalidmail) {
-      mailError.textContent = "Email неверного формата";
-    } else {
-      mailError.textContent = "";
-    }
+      errorMessagemail += "Email неверного формата. ";
+    } 
     if(invalidmailhard)
       {
-        mailError.textContent = "Email уже зарегистрирован";
+        errorMessagemail += "Email уже зарегистрирован."; 
       }
-      else
-      {
+      if (errorMessagemail !== "") {
+        mailError.textContent = errorMessagemail;
+      } else {
         mailError.textContent = "";
       }
     if (invalidphone) {
@@ -200,7 +196,7 @@ function validateForm() {
     } else {
       agreementError.textContent = "";
     }
-
+    console.log(invalidnickname)
     if (invalidfirstname) {
       firstnameError.textContent = "Введите имя";
     } else {
@@ -219,13 +215,18 @@ function validateForm() {
       middlenameError.textContent = "";
     }
 
+    var nicknameErrorMessage = "";
+
     if (invalidnickname) {
-      nicknameError.textContent = "Введите никнейм";
-    } else {
-      nicknameError.textContent = "";
+      nicknameErrorMessage += "Введите никнейм. ";
     }
+    
     if (invalidnicknamehard) {
-      nicknameError.textContent = "Никнейм занят";
+      nicknameErrorMessage += "Никнейм занят.";
+    }
+    
+    if (invalidnickname || invalidnicknamehard) {
+      nicknameError.textContent = nicknameErrorMessage;
     } else {
       nicknameError.textContent = "";
     }
