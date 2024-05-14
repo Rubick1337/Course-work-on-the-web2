@@ -6,6 +6,10 @@ display: flex;
 align-items: center;
 gap: 45px;
 }
+.background-footer
+{
+    height: 1681px;
+}
     .burger-menu {
         display: block;
         display: flex;
@@ -35,5 +39,83 @@ gap: 45px;
     .burger-menu.active span:nth-child(3) {
         transform:rotate(45deg) translate(-31%,50%);
         transition: transform 0.3s ease;
+    }
+    .buttons
+    {
+        margin-left: 47px;
+    }
+    .Text-header h2 
+    {
+        width: 768px;
+    }
+    .img-application
+    {
+        width: 99%;
+        height: 484px;
+    }
+    .footer-container
+    {
+        gap: 115px;
+    }
+    @media screen and (max-width:767px){
+        .buttons
+            {
+                display: none;
+            }
+            .img-profile
+            {
+                display: none;
+            }
+            .group-burger-profile
+            {
+                margin-right: 19px;
+            }
+            .img-logo
+            {
+                margin-left: 20px;
+            }
+            .Text-header h2 
+            {
+                width: auto;
+            }
+            .form-group input[type="text"],
+.form-group input[type="tel"] {
+  width: 300px;
+}
+    }
+    @media screen and (max-width:325px) {
+        .front-welcome
+        {
+            top: 41%;
+        }
+        .Text-header h3
+        {
+            font-size: 15px;
+        }
+        .Text-header h1
+        {
+            font-size: 39px;
+        }
+        .Text-header h2
+        {
+            font-size: 39px;
+        }
+        .after-application
+        {
+            flex-direction: column;
+            width: 88%;
+        }
+        .container-social-footer
+        {
+            justify-content: normal;
+        }
+        .img-application
+        {
+            display: none;
+        }
+        .background-footer
+        {
+            height: 1063px;
+        }
     }
 }
