@@ -115,4 +115,126 @@
           {
             gap: 15px;
           }
+          @media screen and (max-width:767px) {
+            .buttons
+            {
+                display: none;
+            }
+            .img-profile
+            {
+                display: none;
+            }
+            .group-burger-profile
+            {
+                margin-right: 19px;
+            }
+            .img-logo
+            {
+                margin-left: 20px;
+            }
+            .container-cleints
+            {
+                padding-top: 150px;
+                gap: 48px;
+                padding-bottom: 162px;
+            }
+            .client-1
+            {
+                flex-direction: column;
+            }
+            .container-img-clients {
+                padding-left: 0px;
+            }
+            .info-clients {
+                width: 94%;
+            }
+            .title-client-description {
+                width: 100%;
+            }
+            .info-client
+            {
+                margin-top: 65px;
+            }
+            .title-container-cleints h2
+            {
+                font-size: 46px;
+            }
+            .img-client-1
+            {
+                width: 300px;
+            }
+            .img-client-2
+            {
+                width: 300px;
+            }
+            .img-client-3
+            {
+                width: 300px;
+            }
+            .img-client-4
+            {
+                width: 300px;
+            }
+            .img-client-5
+            {
+                width: 300px;
+            }
+            .img-client-6
+            {
+                width: 300px;
+            }
+            .application-container
+            {
+                width: 90%;
+            }
+            .application
+            {
+                width: 100%;
+            }
+            .form-group input[type="text"]
+            {
+                width: 91%;
+            }
+            .after-application
+            {
+                flex-direction: column;
+                margin-left: 40px;
+            }
+            .container-social-footer
+            {
+                justify-content: normal;
+            }
+            .img-application
+            {
+                display: none;
+            }
+            .height-477
+            {
+                height: 477px;
+            }
+            .height-450
+            {
+                height: 450px;
+            }
+            .info-height-347
+            {
+                height: 450px; 
+            }
+            .info-height-368
+            {
+                height: 450px; 
+            }
+            .background-footer
+            {
+                height: 749px;
+            }
+            .form-group input[type="text"],.form-group input[type="tel"]
+            {
+                width: 97%;
+            }
+            .footer-container
+            {
+                gap: 145px; 
+            }
+          }
     }
