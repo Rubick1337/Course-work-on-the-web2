@@ -67,3 +67,29 @@ body.dark-theme .tab label {
   justify-content: center;
   display: flex;
 }
+.after-application h3
+{
+  color: #FFF;
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.title-application h2
+{
+color:  #FFF;
+font-family: "Noto Sans", sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.consultation-footer h2 {
+  color: #ffffff;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
