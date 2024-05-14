@@ -1,12 +1,7 @@
-let users = JSON.parse(localStorage.getItem('users')) || [];
-let pathJson = 'data.json';
+var users = [JSON.parse(localStorage.getItem('users'))];
 console.log(users);
-function CreatedId(users) {
-  return Object.keys(users).length;
-}
 
-function User(id, mail, password, telephone, birthdate, firstname, secondname, middlename, nickname) {
-  this.id = id;
+function User(mail, password, telephone, birthdate, firstname, secondname, middlename, nickname,role) {
   this.mail = mail;
   this.password = password;
   this.telephone = telephone;
@@ -15,6 +10,7 @@ function User(id, mail, password, telephone, birthdate, firstname, secondname, m
   this.secondname = secondname;
   this.middlename = middlename;
   this.nickname = nickname;
+  this.role = "";
 }
 
 let button = document.querySelector("#submit");
@@ -25,7 +21,8 @@ function validateForm() {
   const agreementError = document.querySelector('#agreementError');
   agreementError.textContent = "";
 
-
+  var invalidnicknamehard = false;
+  var invalidmailhard = false;
   var invalidmail = false;
   var invalidphone = false;
   var invalidbirthdate = false;
@@ -58,6 +55,15 @@ function validateForm() {
     invalidmail = true;
     arrayError.push('email');
   }
+  var existingUser = users.find(function(user) {
+    return user.mail === email;
+  });
+    if (existingUser) {
+      console.log("занят");
+      return {
+        invalidmailhard: true,
+      };
+    }
 
   // Проверка номера телефона
   var phoneRegex = /^\+375\d{9}$/;
@@ -121,6 +127,17 @@ function validateForm() {
     invalidnickname = true;
     arrayError.push('nickname');
   }
+  var existingNickname = users.find(function(user) {
+    return user.nickname === nickname;
+  });
+
+  if (existingNickname) {
+    console.log("занят");
+    return {
+
+      invalidnicknamehard: true,
+    };
+  }
 
   if (arrayError.length !== 0) {
     // Отображаем ошибки рядом с соответствующими полями ввода
@@ -140,7 +157,14 @@ function validateForm() {
     } else {
       mailError.textContent = "";
     }
-
+    if(invalidmailhard)
+      {
+        mailError.textContent = "Email уже зарегистрирован";
+      }
+      else
+      {
+        mailError.textContent = "";
+      }
     if (invalidphone) {
       phoneError.textContent = "Номер телефона должен быть в формате '+375123456789'";
     } else {
@@ -200,6 +224,11 @@ function validateForm() {
     } else {
       nicknameError.textContent = "";
     }
+    if (invalidnicknamehard) {
+      nicknameError.textContent = "Никнейм занят";
+    } else {
+      nicknameError.textContent = "";
+    }
   }
 
   // Возвращаем true, если нет ошибок, иначе false
@@ -215,6 +244,85 @@ inputs.forEach(input => {
     const isValid = validateForm();
     button.disabled = !isValid;
   });
+
+});
+function generateRandomNickname() {
+  const adjectives = ["Red", "Blue", "Green", "Yellow", "Purple", "Orange", "Pink", "Black", "White"];
+  const nouns = ["Cat", "Dog", "Bird", "Lion", "Tiger", "Elephant", "Monkey", "Snake", "Bear"];
+
+  const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+  const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+
+  return randomAdjective + randomNoun;
+}
+
+var generateButton = document.getElementById('generate-nick');
+generateButton.addEventListener("click", () => {
+  var nickname_random = generateRandomNickname();
+  console.log(nickname_random);
+  var nickname = document.getElementById('nickname');
+  nickname.value = nickname_random;
+  nicknameError.textContent = "";
+  console.log(nickname)
+});
+
+function generatePassword() {
+  const minLength = 8; // Минимальная длина пароля
+  const maxLength = 20; // Максимальная длина пароля
+  const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+  const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const numericChars = "0123456789";
+  const specialChars = "!@#$%^&*()_+-=";
+
+  const length = getRandomNumber(minLength, maxLength);
+  let password = "";
+
+  // Гарантированное включение по одному символу каждого типа
+  password += getRandomChar(lowercaseChars);
+  password += getRandomChar(uppercaseChars);
+  password += getRandomChar(numericChars);
+  password += getRandomChar(specialChars);
+
+  // Генерация остальных символов пароля
+  for (let i = 4; i < length; i++) {
+    const charsets = [lowercaseChars, uppercaseChars, numericChars, specialChars];
+    const randomIndex = Math.floor(Math.random() * charsets.length);
+    password += getRandomChar(charsets[randomIndex]);
+  }
+
+  return password;
+}
+
+function getRandomChar(charset) {
+  const randomIndex = Math.floor(Math.random() * charset.length);
+  return charset.charAt(randomIndex);
+}
+
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function validatePassword(password) {
+  const hasLowercase = /[a-z]/.test(password);
+  const hasUppercase = /[A-Z]/.test(password);
+  const hasNumeric = /[0-9]/.test(password);
+  const hasSpecial = /[!@#$%^&*()_+\-=]/.test(password);
+
+  return hasLowercase && hasUppercase && hasNumeric && hasSpecial;
+}
+
+var generateButtonpassword = document.getElementById('generate-password');
+generateButtonpassword.addEventListener("click", () => {
+  var generatedPassword = generatePassword();
+
+  while (!validatePassword(generatedPassword)) {
+    generatedPassword = generatePassword();
+  }
+
+  password.value = generatedPassword;
+  repeatpassword.value = generatedPassword;
+  passwordError.textContent = "";
+  console.log(password.value);
 });
 
 button.addEventListener("click", () => {
@@ -226,9 +334,10 @@ button.addEventListener("click", () => {
   var lastname = document.getElementById('lastname').value;
   var middlename = document.getElementById('middlename').value;
   var nickname = document.getElementById('nickname').value;
-  const UserId = CreatedId(users);
-  const user = new User(UserId, email, password, phone, birthdate, firstname, lastname, middlename, nickname);
-  console.log(user);
+  console.log(users);
+  const user = new User(email, password, phone, birthdate, firstname, lastname, middlename, nickname);
+  users.push(user);
+  console.log(users);
   localStorage.setItem('users', JSON.stringify(user));
   document.getElementById('mail').value = "";
   document.getElementById('password').value = "";
@@ -241,5 +350,44 @@ button.addEventListener("click", () => {
   document.getElementById('middlename').value = "";
   document.getElementById('nickname').value = "";
   alert("Вы успешно зарегистрировались");
-  window.location.href = "index_user.html";
+  // window.location.href = "index_user.html";
+});
+
+password.addEventListener("paste", function(e) {
+  e.preventDefault();
+});
+repeatpassword.addEventListener("paste", function(e) {
+  e.preventDefault();
+});
+
+var inputIcon = document.querySelector(".input-icon");
+var eyeIcon = document.getElementById("eye-icon");
+var isPasswordVisible = false;
+
+inputIcon.addEventListener("click", function() {
+  if (!isPasswordVisible) {
+    password.type = "text";
+    eyeIcon.src = "/images/icons8-eye-50.png";
+    isPasswordVisible = true;
+  } else {
+    password.type = "password";
+    eyeIcon.src = "/images/icons8-closed-eye-50.png";
+    isPasswordVisible = false;
+  }
+});
+
+var inputIcon2 = document.querySelector(".input-icon2");
+var eyeIcon2 = document.getElementById("eye-icon2");
+var isPasswordVisible2 = false;
+
+inputIcon2.addEventListener("click", function() {
+  if (!isPasswordVisible2) {
+    repeatpassword.type = "text";
+    eyeIcon2.src = "/images/icons8-eye-50.png";
+    isPasswordVisible2 = true;
+  } else {
+    repeatpassword.type = "password";
+    eyeIcon2.src = "/images/icons8-closed-eye-50.png";
+    isPasswordVisible2 = false;
+  }
 });

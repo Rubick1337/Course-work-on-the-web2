@@ -25,8 +25,54 @@
 .form-registration input
 {
     width: 280px;
+    border-radius: 10px;
+    border: 2px solid red; /* Задайте цвет границы здесь */
+}
+#middlename
+{
+    border: 2px solid white;
 }
 #agreement
 {
     width: 20px;
 }
+#submit
+{
+    height: 39px;
+    background: burlywood;
+}
+#generate-nick, #generate-password
+{
+    width: 74px;
+    background: burlywood;
+    border:none;
+}
+.custom-input {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .custom-input .input-icon {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+  }
+  
+  .custom-input .input-icon img {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+  .custom-input .input-icon2 {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+  }
+  
+  .custom-input .input-icon2 img {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }

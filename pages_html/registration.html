@@ -15,11 +15,6 @@
         <div class="header-container background-settings">
           <div class="menu">
               <div class="buttons">
-                  <label class="switch">
-                    <input type="checkbox" class="switch-input" />
-                    <span class="switch-slider"></span>
-                    <div class="moon"></div>
-                  </label>
                   <div class="dropdown">
                     <button class="dropbtn" type="button" id="button-selector">
                       RU
@@ -46,7 +41,7 @@
               <div class="img-profile background-settings"></div>  
               </div>
               <div class="registration">
-                <h1>Registration</h1>
+                <h1 data-i18n="registration" >Registration</h1>
                 <form id="registration-form">
 
                     <div class="form-registration">
@@ -64,10 +59,21 @@
                     <span id="ageError" class="error-message"></span>
                 
                     <label for="password">Password:</label>
-                    <input type="password" id="password">
+                    <div class="custom-input">
+                      <input type="password" id="password">
+                      <div class="input-icon">
+                        <img src="/images/icons8-closed-eye-50.png" alt="Иконка" id="eye-icon">
+                      </div>
+                    </div>
+                    <button type="button" id="generate-password">generate</button>
                     <span id="passwordError" class="error-message"></span>
                         <label for="repeatpassword">Repeat Password:</label>
-                        <input type="password" id="repeatpassword">
+                        <div class="custom-input">
+                          <input type="password" id="repeatpassword">
+                          <div class="input-icon2">
+                            <img src="/images/icons8-closed-eye-50.png" alt="Иконка" id="eye-icon2">
+                          </div>
+                        </div>
                     <span id="repeatPasswordError" class="error-message"></span>
                     
                 
@@ -88,7 +94,7 @@
                 
                     <label for="nickname">Nickname:</label>
                     <input type="text" id="nickname" placeholder="johndoe">
-                    
+                    <button type="button" id="generate-nick">generate</button>
                     <span id="nicknameError" class="error-message"></span>
                 <div>
                     <input type="checkbox" id="agreement">
@@ -102,43 +108,8 @@
               </div>
           </div>
       </header>
-      <footer class="background-settings background-footer">
-        <div class="footer-container">
-          <div class="application-container">
-            <form class="application">
-              <div class="title-application">
-                <h2 data-i18n="leave_application">ОСТАВИТЬ ЗАЯВКУ</h2>
-              </div>
-      
-              <div class="form-group">
-                <input type="text" id="name" name="name" required>
-                <label for="name" data-i18n="name">Имя:</label>
-              </div>
-      
-              <div class="form-group">
-                <input type="tel" id="phone" name="phone" required>
-                <label for="phone" data-i18n="phone">Телефон:</label>
-              </div>
-      
-              <div class="consultation-footer">
-                <div class="header-btn"></div>
-                <h2 data-i18n="leave_application">оставить заявку</h2>
-              </div>
-            </form>
-            <div class="img-application background-settings"></div>
-          </div>
-          <div class="after-application">
-            <h3 data-i18n="privacy_policy">Политика <br>конфиденциальности:</h3>
-            <div class="img-logo background-settings"></div>
-            <div class="container-social-footer">
-              <div class="instagram-img background-settings"></div>
-              <div class="telegram-img background-settings"></div>
-              <div class="whats-up-img background-settings"></div>
-              <div class="facebook-img background-settings"></div>
-            </div>
-          </div>
-        </div>
-      </footer>
       <script src="/js_files/registration.js"></script>
+      <script src="/js_files/toogle-language.js"></script>
+      <script src="/js_files/translate.js"></script>
 </body>
 </html>

@@ -257,5 +257,10 @@
         "information-text": {
           "ru": "Здесь можно разместить форму заявки или дополнительную информацию.",
           "en": "You can place a form or additional information here."
+        },
+        "registration":
+        {
+          "ru": "Регистрация",
+          "en": "Registration"
         }
   }
