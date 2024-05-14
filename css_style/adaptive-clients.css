@@ -1,0 +1,118 @@
+@media screen and (max-width:1420px) {
+    .img-client-1
+    {
+        width: 364px;
+    }
+    .img-client-2
+    {
+        width: 364px;
+    }
+    .img-client-3
+    {
+        width: 364px;
+    }
+    .img-client-4
+    {
+        width: 364px;
+    }
+    .img-client-5
+    {
+        width: 364px;
+    }
+    .img-client-6
+    {
+        width: 364px;
+    }
+    @media screen and (max-width:1180px) {
+
+        .group-burger-profile
+{
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+        .burger-menu {
+            display: block;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            z-index: 2;
+            position: relative;
+          }
+        .navigation
+        {
+            display: none;
+        }
+        .line-burger
+        {
+            width: 38px;
+            height: 2px;
+            background: #000;   
+        }
+        .burger-menu.active span:nth-child(2) {
+            transform: scale(0);
+            transition: transform 0.3s ease;
+          }
+          .burger-menu.active span:nth-child(1) {
+            transform:rotate(-45deg) translate(-38%,50%);
+            transition: transform 0.3s ease;
+          }
+          .burger-menu.active span:nth-child(3) {
+            transform:rotate(45deg) translate(-31%,50%);
+            transition: transform 0.3s ease;
+          }
+          .container-cleints
+          {
+            gap: 55px;
+          }
+          .client-1
+          {
+            gap: 20px;
+            align-items: center;
+            }  
+            .container-img-clients
+            {
+                padding-left: 10px;
+            } 
+          }
+          .title-client-description h2
+          {
+            font-size: 25px;
+          }
+          .info-clients h3
+          {
+            font-size: 20px;
+          }
+          .income br
+          {
+            display: none;
+          }
+          .location-dnepr
+          {
+            height: 108px;
+          }
+          .local-other
+          {
+            height: 81px;
+          }
+          .local-other br
+          {
+            display: block;
+          }
+          .info-height-347
+          {
+            height: 347px;
+          }
+          .info-height-368
+          {
+            height: 368px;
+          }
+          .container-cleints
+          {
+            padding-bottom: 152px;
+          }
+          .info-client
+          {
+            gap: 15px;
+          }
+    }

@@ -179,20 +179,25 @@ body {
   {
     width: 77%;
   }
-  .location
+  .location-dnepr
+  {
+    height: 66px;
+  }
+  .local-other
   {
     height: 66px;
   }
   .container-cleints
   {
     padding-top: 143px;
+    padding-bottom: 159px;
     display: flex;
     flex-direction: column;
     gap: 109px;
   }
   .title-client-description
 {
-  width: 90%;
+  width: 91%;
 }
 .income
 {
@@ -354,6 +359,7 @@ body {
     height: 100px;
     transition: background 0.5s ease-in-out;
     position: relative;
+    flex-shrink: 0;
   }
   .header-btn::after {
     display: inline-block;
@@ -362,4 +368,12 @@ body {
   }
   .header-btn:hover {
     background: #a9a32a;
+  }
+  .burger-menu
+  {
+    display: none;
+  }
+  .local-other br
+  {
+    display: none;
   }
