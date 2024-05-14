@@ -1,0 +1,206 @@
+.header-container
+{
+    height: 435px;
+    background:url(/images/Frame44.png)
+}
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  body.dark-theme {
+    color: #fff;
+    background: #121212;
+  }
+  body.dark-theme a {
+    color: #fff;
+  }
+  .flex-direction {
+    display: flex;
+    flex-direction: column;
+  }
+  .buttons {
+    display: flex;
+    align-items: center;
+    margin-left: 28px;
+    gap: 22px;
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 96px;
+    height: 36px;
+  }
+  .switch-input {
+    display: none;
+  }
+  .switch-slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    background-color: #fff;
+    transition: 0.3s ease background-color;
+    border-radius: 56px;
+    transition: 0.4s ease-in-out;
+  }
+  .switch-slider::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 32px;
+    height: 32px;
+    background-color: #fafd0f;
+    border-radius: 50%;
+    animation: slide-up-sun 700ms ease-in-out forwards;
+  }
+  .switch-input:focus + .switch-slider {
+    box-shadow: 0 0 3px #000;
+  }
+  .switch-input:checked + .switch-slider {
+    background-color: #000;
+  }
+  .switch-input:checked + .switch-slider::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 52px;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    box-shadow: 6px 2px 1px 5px white;
+    border-radius: 50%;
+    animation: slide-up-moon 700ms;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropbtn {
+    width: 73px;
+    height: 24px;
+    background-image: url(../images/Russia-Flag-icon.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background-position: left;
+  }
+  .dropbtn::after {
+    content: "";
+    background: rgba(0, 0, 0, 0) url(../images/745173.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: 5px;
+    right: -2px;
+    width: 16px;
+    height: 16px;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    background-color: #e8e6e6;
+    width: 73px;
+  }
+  .dropdown-content button {
+    color: black;
+    padding: 2px 0 2px 25px;
+    text-decoration: none;
+    transition: background-color 0.5s ease-in-out;
+    border: 0px;
+    cursor: pointer;
+  }
+  .dropdown-content button:first-child {
+    background: url(../images/Russia-Flag-icon.png) no-repeat left center;
+  }
+  .dropdown-content button:last-child {
+    background: url(../images/flag-usa-icon.png) no-repeat left center;
+  }
+
+  .background-settings {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .img-profile {
+    margin-right: 20px;
+    width: 48px;
+    height: 48px;
+    background-image: url(../images/icon_profile_black.svg);
+  }
+  .img-logo {
+    width: 182px;
+    height: 51px;
+    background-image: url(../images/лого_black.svg);
+  }
+  .menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    transition: background-color 1s ease-in-out;
+  }
+  .navigation ul {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    list-style-type: none;
+    margin-block: 0;
+    padding-inline-start: 0;
+  }
+  .title-header
+  {
+    padding-top: 34px;
+    display: flex;
+    justify-content: center;
+}
+.container-img-clients
+{
+    padding-left: 70px;
+}
+.img-client-1
+{
+    background-image:url(../images/Rectangle21.jpg);
+    height: 345px;
+    width: 814px;
+}
+.info-client {
+    margin-top: 54px;
+    gap: 13px;
+  }
+  .info-clients
+  {
+    width: 77%;
+  }
+  .location
+  {
+    height: 66px;
+  }
+  .container-cleints
+  {
+    padding-top: 143px;
+    display: flex;
+    flex-direction: column;
+    gap: 109px;
+  }
+  .title-client-description
+{
+  width: 90%;
+}
+.income
+{
+    width: 94%;
+}
+.img-client-2
+{
+    background-image:url(../images/Rectangle22.jpg);
+    height: 345px;
+    width: 814px;
+}

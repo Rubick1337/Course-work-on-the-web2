@@ -196,7 +196,6 @@ function validateForm() {
     } else {
       agreementError.textContent = "";
     }
-    console.log(invalidnickname)
     if (invalidfirstname) {
       firstnameError.textContent = "Введите имя";
     } else {
