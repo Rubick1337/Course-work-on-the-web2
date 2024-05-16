@@ -32,6 +32,11 @@
     transform: rotate(45deg) translate(-31%, 50%);
     transition: transform 0.3s ease;
   }
+  .panels
+  {
+    padding: 205px 90px;
+    gap: 44px;
+  }
   @media screen and (max-width: 767px) {
     .img-profile {
       display: none;
