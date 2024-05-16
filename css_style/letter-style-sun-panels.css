@@ -41,6 +41,7 @@ font-size: 37px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+word-wrap: break-word;
 }
 .products-count h3
 {

@@ -54,10 +54,108 @@
     .form-group input[type="tel"] {
       width: 300px;
     }
+    .application-container
+    {
+        width: 90%;
+    }
+    .application
+    {
+        width: 100%;
+    }
+    .form-group input[type="text"]
+    {
+        width: 91%;
+    }
+    .after-application
+    {
+        flex-direction: column;
+        width: 88%;
+    }
+    .container-social-footer
+    {
+        justify-content: normal;
+    }
+    .img-application
+    {
+        display: none;
+    }
+    .background-footer
+    {
+        height: 749px;
+    }
+    .form-group input[type="text"],.form-group input[type="tel"]
+    {
+        width: 97%;
+    }
+    .footer-container
+    {
+        gap: 145px; 
+    }
+    .panels
+    {
+        padding: 207px 5px;
+        gap: 47px;
+    }
+    .group-panel
+    {
+        width: 310px;
+        height: 479px;
+        gap: 10px;
+    }
+    .img-panel-1
+{
+    width: 230px;
+    height: 182px;
+}
+.img-panel-2
+{
+    width: 230px;
+    height: 206px;
+}
+.img-panel-3
+{
+    width: 230px;
+    height: 245px;
+}
+.img-panel-4
+{
+    width: 230px;
+    height: 246px;
+}
+.img-panel-5
+{
+
+    width: 230px;
+    height: 267px;
+}
+.img-panel-6
+{
+    width: 230px;
+    height: 179px;
+}
+.img-panel-7
+{
+    width: 230px;
+    height: 267px;
+}
+.img-panel-8
+{
+    background-image:url(../images/image312.png);   
+    width: 259px;
+    height: 267px;
+}
+.header-container
+{
+    height: 428px;
+}
   }
   @media screen and (max-width:560px) {
     .buttons {
         display: none;
+      }
+      .title-panel
+      {
+        width: 222px;
       }
   }
 }
