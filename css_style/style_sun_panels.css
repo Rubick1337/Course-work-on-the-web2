@@ -231,3 +231,139 @@ flex-wrap: wrap;
     gap: 3px;
     border: 2px solid #ccc;
 }
+.background-footer
+{
+  background-image:url(/images/Rectangle13.png);
+  height:801px;
+}
+.footer-container
+{
+  height: 100%;
+  display: flex;
+  gap: 68px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.application-container
+{
+  width: 75%;
+  display: flex;
+  gap: 75px;
+}
+.application
+{
+  gap: 67px;
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.form-group {
+  position: relative;
+}
+
+.form-group label {
+  position: absolute;
+  top: -13px;
+  left: 0;
+  transition: top 0.3s, font-size 0.3s;
+}
+
+.form-group input:focus + label {
+  top: -30px;
+}
+.form-group input[type="text"],
+.form-group input[type="tel"] {
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  outline: none;
+  color: white;
+  width: 83%;
+}
+.img-application
+{
+  background-image:url(/images/image1.png);
+  width: 718px;
+  height: 437px;
+}
+.consultation-footer
+{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+}
+.after-application
+{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.container-social-footer
+{
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  align-items: center;
+}
+.instagram-img {
+    width: 29.52px;
+    height: 32.36px;
+    background-image: url(../images/instagram.svg);
+  }
+  .telegram-img {
+    width: 30px;
+    height: 24.12px;
+    background-image: url(../images/telegram.svg);
+  }
+  .whats-up-img {
+    width: 29.52px;
+    height: 32.36px;
+    background-image: url(../images/whatsapp.svg);
+  }
+  .facebook-img {
+    width: 17px;
+    height: 32.88px;
+    background-image: url(../images/facebook.svg);
+  }
+  .form-group label[for="phone"],.form-group label[for="name"] {
+    color:#FFF;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.img-logo-white
+{
+    width: 182px;
+    height: 51px;
+    background-image: url(../images/лого1.svg);
+}
+.consultation {
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .header-btn {
+    display: block;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    transition: background 0.5s ease-in-out;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .header-btn::after {
+    display: inline-block;
+    content: url(../images/Arrow3.svg);
+    padding: 40px 0 0 27px;
+  }
+  .header-btn:hover {
+    background: #a9a32a;
+  }
