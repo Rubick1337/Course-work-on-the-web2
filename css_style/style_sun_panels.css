@@ -161,3 +161,73 @@ body {
     display: flex;
     justify-content: center;
 }
+.img-panel-1
+{
+    background-image:url(../images/image3.png);
+    width: 385px;
+    height: 284px;
+}
+.img-panel-2
+{
+    background-image:url(../images/image31.png);
+    width: 385px;
+    height: 284px;
+}
+.img-panel-3
+{
+    background-image:url(../images/image36.png);
+    width: 385px;
+    height: 284px;
+}
+.img-panel-4
+{
+    background-image:url(../images/image38.png);
+    width: 385px;
+    height: 284px;
+}
+.img-panel-5
+{
+    background-image:url(../images/image39.png);
+    width: 385px;
+    height: 304px;
+}
+.img-panel-6
+{
+    background-image:url(../images/image367.png);
+
+    width: 385px;
+    height: 279px;
+}
+.img-panel-7
+{
+    background-image:url(../images/image341.png);
+    width: 385px;
+    height: 306px;
+}
+.img-panel-8
+{
+    background-image:url(../images/image3145.png);
+    width: 385px;
+    height: 284px;
+}
+.panels
+{
+    display: flex;
+    padding: 204px 90px;
+justify-content: center;
+align-items: center;
+align-content: center;
+gap: 50px;
+flex-wrap: wrap;
+}
+.group-panel
+{
+    display: flex;
+    width: 465px;
+    height: 479px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3px;
+    border: 2px solid #ccc;
+}
