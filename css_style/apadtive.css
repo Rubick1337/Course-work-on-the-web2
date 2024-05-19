@@ -56,6 +56,46 @@
     align-items: center;
     width: auto;
   }
+  .clients
+  {
+    height: 642px;
+  }
+  .container-clients
+  {
+    height: 529px;
+    gap: 20px;
+    margin-top: 0px;
+    width: 87%;
+  }
+  .container-cleints-pignation
+  {
+    margin-top: 39px;
+  }
+  .slider
+  {
+    height: 481px;
+    gap: 30px;
+  }
+  .title-steps br
+  {
+    display: none;
+  }
+  .container-step
+  {
+    gap: 80px;
+  }
+  .container-cleints-pignation
+  {
+    height: 481px;
+  }
+  .info-client
+  {
+    margin-top: 56px;
+  }
+  .consultation-black
+  {
+    margin-top: 41px;
+  }
   .text-1
   {
     width: auto;
@@ -72,9 +112,7 @@
     width: 590px;
   }
 
-  .container-clients {
-    width: 89%;
-  }
+
   .img-clients {
     width: 319px;
     height: 347px;
@@ -121,7 +159,8 @@
   }
   .left-steps
   {
-    width: 660px;
+    width: 603px;
+    gap: 68px;
   }
   .five-steps{
     height: fit-content;
@@ -130,5 +169,35 @@
   {
     flex-wrap: wrap;
     justify-content: center;
+    height: fit-content;
+    gap: 100px;
+  }
+  .container-section-contacts
+  {
+    gap: 106px;
+  }
+  .contacts-info
+  {
+    width: 650px;
+  }
+  .contacts
+  {
+    height: 930px;
+  }
+  .consultation-footer h2
+  {
+    font-size: 13px;
+  }
+  .application-container
+  {
+    gap: 84px;
+  }
+  .front-welcome
+  {
+    top:51%;
+  }
+  .Text-header h1
+  {
+    font-size: 73px;
   }
 }
