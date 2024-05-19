@@ -148,6 +148,10 @@
 {
     height: 428px;
 }
+.title-panel
+{
+    width: 300px;
+}
   }
   @media screen and (max-width:560px) {
     .buttons {

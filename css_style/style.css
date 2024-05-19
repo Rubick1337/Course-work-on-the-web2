@@ -266,7 +266,10 @@ body {
     display: flex;
     width: 100%;
     gap: 114px;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    align-content: center;
     flex-wrap: wrap;
   }
   .tab
@@ -485,6 +488,8 @@ body {
     display: flex;
     justify-content: center;
     gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
   }
   .text-1-steps {
     width: 87%;
