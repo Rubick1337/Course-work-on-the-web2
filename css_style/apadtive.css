@@ -181,18 +181,7 @@
       width: 300px;
       height: 299px;
     }
-    .front-welcome {
-      top: 41%;
-    }
-    .Text-header h3 {
-      font-size: 15px;
-    }
-    .Text-header h1 {
-      font-size: 39px;
-    }
-    .Text-header h2 {
-      font-size: 39px;
-    }
+    
     .buttons {
       display: none;
     }
@@ -244,24 +233,27 @@
     .text-right-green {
       font-size: 16px;
     }
+    .rigth-green
+    {
+      justify-content: center;
+    align-items: center;
+    }
     .text-slider {
       width: 103%;
     }
-    .text-quote h2 {
-      font-size: 21px;
-    }
+
     .left-steps {
       width: 260px;
     }
     .img-steps {
-      width: 304px;
+      width: 350px;
       height: 256px;
     }
     .contacts-info {
-      width: 310px;
+      width: 96%;
     }
     .map {
-      width: 310px;
+      width: 500px;
       height: 285px;
     }
     .application-container {
@@ -337,5 +329,33 @@
 {
   gap: 16px;
 }
+  }
+  @media screen and (max-width:673px) {
+    .text-quote h2 {
+      font-size: 21px;
+    }
+  }
+  @media screen and (max-width:611px) {
+    .front-welcome {
+      top: 41%;
+    }
+    .Text-header h3 {
+      font-size: 15px;
+    }
+    .Text-header h1 {
+      font-size: 39px;
+    }
+    .Text-header h2 {
+      font-size: 39px;
+    }
+    .img-steps {
+      width: 300px;
+    }
+  }
+  @media screen and (max-width:511px) {
+    .map {
+      width: 310px;
+
+    }
   }
 }
