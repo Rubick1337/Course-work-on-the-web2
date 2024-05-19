@@ -15,31 +15,25 @@
   .green-tariff {
     height: 1492px;
   }
-  .container-green-tariff
-  {
+  .container-green-tariff {
     gap: 135px;
     margin-left: 0px;
   }
-  .container-description-green
-  {
+  .container-description-green {
     width: 581px;
     gap: 40px;
   }
-  .tab
-  {
+  .tab {
     gap: 111.5px;
   }
-  .slider-tariff
-  {
+  .slider-tariff {
     gap: 19px;
   }
-  .img-slider-tarrif
-  {
+  .img-slider-tarrif {
     height: 118px;
     width: 281px;
   }
-  .pignation-slider
-  {
+  .pignation-slider {
     gap: 22px;
   }
 }
@@ -56,53 +50,42 @@
     align-items: center;
     width: auto;
   }
-  .clients
-  {
+  .clients {
     height: 642px;
   }
-  .container-clients
-  {
+  .container-clients {
     height: 529px;
     gap: 20px;
     margin-top: 0px;
     width: 87%;
   }
-  .container-cleints-pignation
-  {
+  .container-cleints-pignation {
     margin-top: 39px;
   }
-  .slider
-  {
+  .slider {
     height: 481px;
     gap: 30px;
   }
-  .title-steps br
-  {
+  .title-steps br {
     display: none;
   }
-  .container-step
-  {
+  .container-step {
     gap: 80px;
   }
-  .container-cleints-pignation
-  {
+  .container-cleints-pignation {
     height: 481px;
   }
-  .info-client
-  {
+  .info-client {
     margin-top: 56px;
   }
-  .consultation-black
-  {
+  .consultation-black {
     margin-top: 41px;
   }
-  .text-1
-  {
+  .text-1 {
     width: auto;
     gap: 21px;
   }
-  .container-services
-  {
+  .container-services {
     gap: 36px;
   }
   .services {
@@ -111,7 +94,6 @@
   .container-description {
     width: 590px;
   }
-
 
   .img-clients {
     width: 319px;
@@ -153,51 +135,207 @@
     transform: rotate(45deg) translate(-31%, 50%);
     transition: transform 0.3s ease;
   }
-  .text-1-steps
-  {
+  .text-1-steps {
     width: 99%;
   }
-  .left-steps
-  {
+  .left-steps {
     width: 603px;
     gap: 68px;
   }
-  .five-steps{
+  .five-steps {
     height: fit-content;
   }
-  .container-contacts-info
-  {
+  .container-contacts-info {
     flex-wrap: wrap;
     justify-content: center;
     height: fit-content;
     gap: 100px;
   }
-  .container-section-contacts
-  {
+  .container-section-contacts {
     gap: 106px;
   }
-  .contacts-info
-  {
+  .contacts-info {
     width: 650px;
   }
-  .contacts
-  {
+  .contacts {
     height: 930px;
   }
-  .consultation-footer h2
-  {
+  .consultation-footer h2 {
     font-size: 13px;
   }
-  .application-container
-  {
+  .application-container {
     gap: 84px;
   }
-  .front-welcome
-  {
-    top:51%;
+  .front-welcome {
+    top: 51%;
   }
-  .Text-header h1
-  {
+  .Text-header h1 {
     font-size: 73px;
+  }
+  @media screen and (max-width: 700px) {
+    .container-description {
+      width: 310px;
+    }
+
+    .img-services {
+      width: 300px;
+      height: 299px;
+    }
+    .front-welcome {
+      top: 41%;
+    }
+    .Text-header h3 {
+      font-size: 15px;
+    }
+    .Text-header h1 {
+      font-size: 39px;
+    }
+    .Text-header h2 {
+      font-size: 39px;
+    }
+    .buttons {
+      display: none;
+    }
+    .img-profile {
+      display: none;
+    }
+    .group-burger-profile {
+      margin-right: 19px;
+    }
+    .img-logo {
+      margin-left: 20px;
+    }
+    .Text-header h2 {
+      width: auto;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="tel"] {
+      width: 300px;
+    }
+    .green-tariff {
+      height: 1494px;
+    }
+    .container-green-tariff {
+      gap: 30px;
+      margin-left: 0px;
+    }
+    .container-description-green {
+      width: auto;
+      gap: 14px;
+    }
+    .tab {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+    }
+    .img-slider-tarrif {
+      height: 118px;
+      width: 139px;
+    }
+    .text-right-green {
+      max-width: none;
+      min-width: 294px;
+    }
+    .img-green-tarif {
+      height: 264px;
+      width: 299px;
+    }
+    .text-right-green {
+      font-size: 16px;
+    }
+    .text-slider {
+      width: 103%;
+    }
+    .text-quote h2 {
+      font-size: 21px;
+    }
+    .left-steps {
+      width: 260px;
+    }
+    .img-steps {
+      width: 304px;
+      height: 256px;
+    }
+    .contacts-info {
+      width: 310px;
+    }
+    .map {
+      width: 310px;
+      height: 285px;
+    }
+    .application-container {
+      width: 90%;
+    }
+    .application {
+      width: 100%;
+    }
+    .form-group input[type="text"] {
+      width: 91%;
+    }
+    .after-application {
+      flex-direction: column;
+      width: 88%;
+    }
+    .container-social-footer {
+      justify-content: normal;
+    }
+    .img-application {
+      display: none;
+    }
+    .background-footer {
+      height: 749px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="tel"] {
+      width: 97%;
+    }
+    .footer-container {
+      gap: 145px;
+    }
+    .no-margin {
+      margin-left: 0px;
+    }
+    .container-cleints {
+      height: 968px;
+    }
+    .clients {
+      height: 1079px;
+    }
+    .slider {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title-client {
+      width: 310px;
+    }
+    .info-clients {
+      width: 380px;
+    }
+    .container-cleints-pignation {
+      margin-top: 40px;
+      height: 403px;
+    }
+    .container-clients {
+      height: 965px;
+  }
+    .quote {
+      height: 328px;
+    }
+    .container-step {
+      gap: 101px;
+  } 
+  .contacts {
+    height: 897px;
+}
+.container-section-contacts {
+  gap: 134px;
+}
+.container-contacts-info
+{
+  gap: 16px;
+}
   }
 }
