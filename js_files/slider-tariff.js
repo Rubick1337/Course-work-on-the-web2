@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     var tariffs;
-  
+    const lang = getLanguage();
     fetch('/json/slider-green-tariff.json')
       .then(response => {
         if (!response.ok) {
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .then(jsonData => {
         var language;
-        if (window.location.hash === '#ru') {
+        if (lang === 'ru') {
           language = 'ru';
         } else {
           language = 'en';
@@ -52,4 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       updateContent(currentClientIndex);
     });
+    function getLanguage() {
+      return localStorage.getItem('lang') || 'ru';
+    }
   });

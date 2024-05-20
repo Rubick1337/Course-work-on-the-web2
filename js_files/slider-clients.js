@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     var clients;
-  
+    const lang = getLanguage();
     fetch('/json/slider-clients.json')
       .then(response => {
         if (!response.ok) {
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .then(jsonData => {
         var language;
-        if (window.location.hash === '#ru') {
+        if  (lang === 'ru') {
           language = 'ru';
         } else {
           language = 'en';
@@ -61,4 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       updateContent(currentClientIndex);
     });
+    function getLanguage() {
+      return localStorage.getItem('lang') || 'ru';
+    }
   });
