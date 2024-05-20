@@ -242,10 +242,6 @@
           "en": "Name:",
           "ru": "Имя:"
         },
-        "phone": {
-          "en": "Phone:",
-          "ru": "Телефон:"
-        },
         "privacy_policy": {
           "en": "Privacy Policy:",
           "ru": "Политика <br> конфиденциальности:"
@@ -262,5 +258,229 @@
         {
           "ru": "Регистрация",
           "en": "Registration"
-        }
+        },
+        "data-i18n:services": {
+          "en": "Services",
+          "ru": "Услуги"
+        },
+        "data-i18n:green_tariff_header": {
+          "en": "Green Tariff",
+          "ru": "Зеленый тариф"
+        },
+        "data-i18n:our_clients_header": {
+          "en": "Our Clients",
+          "ru": "Наши клиенты"
+        },
+        "data-i18n:power_station_header": {
+          "en": "Power Station",
+          "ru": "Электростанция"
+        },
+        "data-i18n:title_header": {
+          "en": "Solar Panels",
+          "ru": "Солнечные батареи"
+        },
+        "clients": {
+          "en": "Our clients",
+          "ru": "Наши клиенты"
+        },
+        "solar_station_title-1": {
+          "en": "12 kW Solar Power Station Connected to the Green Tariff",
+          "ru": "Солнечная электростанция 12 кВт подключенная по Зеленому Тарифу"
+        },
+        "location-1": {
+          "en": "Location: Dnipropetrovsk region, Dnipro city",
+          "ru": "Расположение: Днепропетровская область обл., г. Днепр"
+        },
+        "clean_income-1": {
+          "en": "Net income after taxes from May 2021 to May 2022: $8,900",
+          "ru": "Чистый доход за вычетом налогов с мая 2021 г. по май 2022 г. 8 900 $."
+        },
+        "installed_date-1": {
+          "en": "Installed: April 2021",
+          "ru": "Смонтирована: апрель 2021 г."
+        },
+        "service_life-1": {
+          "en": "Service Life: 25-30 years",
+          "ru": "Срок службы: 25-30 лет"
+        },
+        "solar_station_title-2": {
+          "en": "20 kW Solar Power Station Connected to the Green Tariff",
+          "ru": "Солнечная электростанция 20 кВт подключенная по Зеленому Тарифу"
+        },
+        "location-2": {
+          "en": "Location: Kyiv region, Kyiv city",
+          "ru": "Расположение: Киевская обл., г. Киев"
+        },
+        "clean_income-2": {
+          "en": "Net income after taxes from May 2019 to May 2020: $11,100",
+          "ru": "Чистый доход за вычетом налогов с мая 2019 г. по май 2020 г. 11 100 $."
+        },
+        "installed_date-2": {
+          "en": "Installed: April 2019",
+          "ru": "Смонтирована: апрель 2019 г."
+        },
+        "service_life-2": {
+          "en": "Service Life: 25-30 years",
+          "ru": "Срок службы: 25-30 лет"
+        },
+        "solar_station_title-3": {
+          "en": "6 kW Solar Power Station Connected to the Green Tariff",
+          "ru": "Солнечная электростанция 6 кВт подключенная по Зеленому Тарифу"
+        },
+        "location-3": {
+          "en": "Location: Donetsk region, Donetsk city",
+          "ru": "Расположение: Донецкая обл., г. Донецк"
+        },
+        "clean_income-3": {
+          "en": "Net income after taxes from May 2015 to May 2016: $6,900",
+          "ru": "Чистый доход за вычетом налогов с мая 2015 г. по май 2016 г. 6 900 $."
+        },
+        "installed_date-3": {
+          "en": "Installed: April 2015",
+          "ru": "Смонтирована: апрель 2015 г."
+        },
+        "service_life-3": {
+          "en": "Service Life: 25-30 years",
+          "ru": "Срок службы: 25-30 лет"
+        },
+        "solar_station_title-4": {
+          "en": "15 kW Solar Power Station Connected to the Green Tariff",
+          "ru": "Солнечная электростанция 15 кВт подключенная по Зеленому Тарифу"
+        },
+        "location-4": {
+          "en": "Location: Zhytomyr region, Zhytomyr city",
+          "ru": "Расположение: Житомирская обл., г. Житомир"
+        },
+        "clean_income-4": {
+          "en": "Net income after taxes from May 2020 to May 2021: $12,100",
+          "ru": "Чистый доход за вычетом налогов с мая 2020 г. по май 2021 г. 12 100 $."
+        },
+        "installed_date-4": {
+          "en": "Installed: April 2020",
+          "ru": "Смонтирована: апрель 2020 г."
+        },
+        "service_life-4": {
+          "en": "Service Life: 25-30 years",
+          "ru": "Срок службы: 25-30 лет"
+        },
+        "solar_station_title-5": {
+          "en": "32 kW Solar Power Station Connected to the Green Tariff",
+          "ru": "Солнечная электростанция 32 кВт подключенная по Зеленому Тарифу"
+        },
+        "location-5": {
+          "en": "Location: Zakarpattia region, Uzhhorod city",
+          "ru": "Расположение: Закарпатская обл., г. Ужгород"
+        },
+        "clean_income-5": {
+          "en": "Net income after taxes from May 2017 to May 2019: $15,900",
+          "ru": "Чистый доход за вычетом налогов с мая 2017 г. по май 2019 г. 15 900 $."
+        },
+        "installed_date-5": {
+          "en": "Installed: April 2017",
+          "ru": "Смонтирована: апрель 2017 г."
+        },
+        "service_life-5": {
+          "en": "Service Life: 25-30 years",
+          "ru": "Срок службы: 25-30 лет"
+        },
+        "solar_station_title-6": {
+          "en": "30 kW Solar Power Station Connected to the Green Tariff",
+          "ru": "Солнечная электростанция 30 кВт подключенная по Зеленому Тарифу"
+        },
+        "location-6": {
+          "en": "Location: Kharkiv region, Kharkiv city",
+          "ru": "Расположение: Харьковская обл., г. Харьков"
+        },
+        "clean_income-6": {
+          "en": "Net income after taxes from May 2017 to May 2019: $13,900",
+          "ru": "Чистый доход за вычетом налогов с мая 2017 г. по май 2019 г. 13 900 $."
+        },
+        "installed_date-6": {
+          "en": "Installed: April 2017",
+          "ru": "Смонтирована: апрель 2017 г."
+        },
+        "service_life-6": {
+          "en": "Service Life: 25-30 years",
+          "ru": "Срок службы: 25-30 лет"
+        },
+        "title-panel-1": {
+          "en": "Monocrystalline Solar Panels",
+          "ru": "Монокристаллические солнечные панели"
+          },
+          "count-panel-1": {
+          "en": "30 products",
+          "ru": "30 товаров"
+          },
+          "title-panel-2": {
+          "en": "Polycrystalline Solar Panels",
+          "ru": "Поликристаллические солнечные панели"
+          },
+          "count-panel-2": {
+          "en": "13 products",
+          "ru": "13 товаров"
+          },
+          "title-panel-3": {
+          "en": "Glass Solar Panels",
+          "ru": "Стеклянные солнечные панели"
+          },
+          "count-panel-3": {
+          "en": "4 products",
+          "ru": "4 товаров"
+          },
+          "title-panel-4": {
+          "en": "Flexible Solar Panels",
+          "ru": "Гибкие солнечные панели"
+          },
+          "count-panel-4": {
+          "en": "6 products",
+          "ru": "6 товаров"
+          },
+          "title-panel-5": {
+            "en": "Portable Solar Panels",
+            "ru": "Портативные солнечные панели"
+            },
+            "count-panel-5": {
+            "en": "16 products",
+            "ru": "16 товаров"
+            },
+            "title-panel-6": {
+            "en": "Solar Panel Kits for Surveillance",
+            "ru": "Комплект солнечных панелей для видеонаблюдения"
+            },
+            "count-panel-6": {
+            "en": "3 products",
+            "ru": "3 товаров"
+            },
+            "title-panel-7": {
+            "en": "Solar Batteries for Home and Dacha",
+            "ru": "Солнечные батареи для дома и дачи"
+            },
+            "count-panel-7": {
+            "en": "1 product",
+            "ru": "1 товар"
+            },
+            "title-panel-8": {
+            "en": "Solar Panels 12 Volts",
+            "ru": "Солнечные панели 12 вольт"
+            },
+            "count-panel-8": {
+            "en": "7 products",
+            "ru": "7 товаров"
+            },
+            "sunpanel": {
+              "en": "Solar Panel Type",
+              "ru": "Тип солнечной панели"
+              },
+              "count": {
+              "en": "Quantity:",
+              "ru": "Количество:"
+              },
+              "region": {
+              "en": "Delivery Region (If Required):",
+              "ru": "Регион доставки (Если требуется):"
+              },
+              "tariff": {
+              "en": "Tariff:",
+              "ru": "Тариф:"
+              }
   }

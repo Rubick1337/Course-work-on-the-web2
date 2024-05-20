@@ -13,9 +13,6 @@ body {
     color: #fff;
     background: #121212;
   }
-  body.dark-theme a {
-    color: #fff;
-  }
   .flex-direction {
     display: flex;
     flex-direction: column;

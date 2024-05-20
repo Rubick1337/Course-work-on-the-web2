@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const lang = getLanguage();
   const dropbtn = document.querySelector(".dropbtn");
-  if (location.href.includes("#en")) {
+  if (lang == "en") {
     dropbtn.textContent = "EN";
     dropbtn.style.backgroundImage = 'url("/images/flag-usa-icon.png")';
-  } else if (location.href.includes("#ru")) {
+  } else if (lang == "ru") {
     dropbtn.textContent = "RU";
     dropbtn.style.backgroundImage = 'url("/images/Russia-Flag-icon.png")';
   }
@@ -18,4 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
       dropdownContent.style.display = "none";
     }
   });
+  function getLanguage() {
+    return localStorage.getItem('lang') || 'ru';
+  }
 });
