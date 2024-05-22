@@ -1,4 +1,4 @@
-const switchInput = document.querySelector('.switch-input');
+const switchInputs = document.querySelectorAll('.switch-input');
 const body = document.body;
 
 // Проверяем, есть ли сохраненное значение в локальном хранилище
@@ -7,17 +7,29 @@ const isDarkThemeEnabled = localStorage.getItem('darkThemeEnabled') === 'true';
 // Устанавливаем начальное значение в соответствии с сохраненным значением
 if (isDarkThemeEnabled) {
   body.classList.add('dark-theme');
-  switchInput.checked = true;
+  switchInputs.forEach(input => input.checked = true);
 }
 
-switchInput.addEventListener('change', function() {
-  if (this.checked) {
+// Функция для обновления темы
+function updateTheme(isEnabled) {
+  if (isEnabled) {
     body.classList.add('dark-theme');
-    // Сохраняем значение в локальном хранилище при изменении
     localStorage.setItem('darkThemeEnabled', 'true');
   } else {
     body.classList.remove('dark-theme');
-    // Сохраняем значение в локальном хранилище при изменении
     localStorage.setItem('darkThemeEnabled', 'false');
   }
+}
+
+// Обработчик для всех переключателей
+switchInputs.forEach(input => {
+  input.addEventListener('change', function() {
+    updateTheme(this.checked);
+    // Синхронизируем все переключатели
+    switchInputs.forEach(otherInput => {
+      if (otherInput !== this) {
+        otherInput.checked = this.checked;
+      }
+    });
+  });
 });

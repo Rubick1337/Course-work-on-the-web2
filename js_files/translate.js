@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const russianButton = document.getElementById("button-ru");
   const englishButton = document.getElementById("button-en");
+  const russianButtonburger = document.getElementById("button-ru-burger");
+  const englishButtonburger = document.getElementById("button-en-burger");
   const allLang = ['en', 'ru'];
   var langArr;
 
@@ -26,6 +28,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Обработчик клика на кнопку английского языка
   englishButton.addEventListener("click", function () {
+    setLanguage("en");
+  });
+
+  russianButtonburger.addEventListener("click", function () {
+    setLanguage("ru");
+  });
+
+
+  englishButtonburger.addEventListener("click", function () {
     setLanguage("en");
   });
 

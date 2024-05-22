@@ -1,25 +1,33 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
     max-width: 1920px;
     margin: 0 auto;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
   }
   body.dark-theme {
     color: #fff;
     background: #121212;
   }
-  body.dark-theme a {
-    color: #fff;
-  }
   .flex-direction {
     display: flex;
     flex-direction: column;
+  }
+  .img-profile-burger
+  {
+    display: none;
   }
   .buttons {
     display: flex;
     align-items: center;
     margin-left: 28px;
     gap: 22px;
+  }
+  .buttons-burger
+  {
+    display: none;
   }
   .switch {
     position: relative;
@@ -650,7 +658,7 @@ body.dark-theme .line-section {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
-  border: 1px solid #888;
+  border: 2px solid #161616;
   width: 80%;
   position: relative;
     justify-content: center;
@@ -659,7 +667,10 @@ body.dark-theme .line-section {
     flex-direction: column;
     gap: 10px;
 }
-
+#modal-content.dark-theme
+{
+  background-color:#000;
+}
 #close-btn {
   position: absolute;
   right: 19px;

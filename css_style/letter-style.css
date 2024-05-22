@@ -43,6 +43,10 @@ body.dark-theme .tab label {
   font-weight: 700;
   line-height: normal;
 }
+.modal-content h2
+{
+  text-align: center;
+}
 .Text-header h2 {
   color: #ffffff;
   text-align: center;

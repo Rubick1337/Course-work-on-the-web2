@@ -482,5 +482,9 @@
               "tariff": {
               "en": "Tariff:",
               "ru": "Тариф:"
+              },
+              "consultation-panels":{
+                "en": "Our suns panels",
+                "ru": "Наши солнечные панели"
               }
   }

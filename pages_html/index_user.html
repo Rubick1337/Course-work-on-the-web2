@@ -35,12 +35,35 @@
             </div>
             <div class="img-logo background-settings"></div>    
             <nav class="navigation">
+              <div class="line-burger-section"></div>
               <ul>
-                <li><a href="#" data-i18n="services">Услуги</a></li>
-                <li><a href="#" data-i18n="green_tariff_header">Зеленый тариф</a></li>
-                <li><a href="#" data-i18n="our_clients_header">Наши клиенты</a></li>
-                <li><a href="#" data-i18n="power_station_header">Электростанция</a></li>
+                <li><a href="#services-navigation" data-i18n="services">Услуги</a></li>
+                <li><a href="#green-tariff-navigation" data-i18n="green_tariff_header">Зеленый тариф</a></li>
+                <li><a href="#clients-navigation" data-i18n="our_clients_header">Наши клиенты</a></li>
+                <li><a href="#five-steps-navigation" data-i18n="power_station_header">Электростанция</a></li>
               </ul>
+              <div class="line-burger-section"></div>
+              <div class="buttons-burger">
+                <label class="switch">
+                  <input type="checkbox" class="switch-input" />
+                  <span class="switch-slider"></span>
+                  <div class="moon"></div>
+                </label>
+                <div class="dropdown">
+                  <button class="dropbtn" type="button" id="button-selector">
+                    RU
+                  </button>
+                  <div class="dropdown-content">
+                    <button class="language-btn" type="button" id="button-ru-burger">
+                      RU
+                    </button>
+                    <button class="language-btn" type="button" id="button-en-burger">
+                      EN
+                    </button>
+                  </div>
+                </div>
+            </div>
+            <div class="img-profile-burger background-settings"></div>
             </nav>
             <div class="group-burger-profile">
               <div class="burger-menu">
@@ -59,7 +82,7 @@
               </div>
               <div class="consultation">
                 <div class="header-btn" id="panels-link"></div>
-                <h2 data-i18n="consultation">Наши солнечные панели</h2>
+                <h2 data-i18n="consultation-panels">Наши солнечные панели</h2>
               </div>
               <div class="container-social">
                 <div class="instagram-img background-settings"></div>
@@ -71,6 +94,7 @@
         </div>
     </header>
     <main>
+      <div class="overlay"></div>
       <div id="modal">
         <div id="modal-content">
             <span id="close-btn">&times;</span>
@@ -85,7 +109,7 @@
             </div>
         </div>
     </div>
-      <section class="services center">
+      <section id="services-navigation" class="services center">
         <div class="container-services">
           <div class="container-description">
             <div class="title-services">
@@ -115,7 +139,7 @@
         </div>
       </section>
     </section>
-    <section class="green-tariff center">
+    <section id="green-tariff-navigation" class="green-tariff center">
       <div class="container-green-tariff">
         <div class="container-description-green">
           <div class="title-green">
@@ -179,7 +203,7 @@
           <h2 data-i18n="quote_text">«Солнечная электростанция <br>— идеальное вложение средств <br> в свою энергонезависимость <br>и пассивный доход»</h2>
         </div>
       </section>
-      <section class="clients center">
+      <section id="clients-navigation" class="clients center">
         <div class="container-clients">
           <div class="title-clients">
             <h2 data-i18n="clients_title">НАШИ КЛИЕНТЫ</h2>
@@ -212,7 +236,7 @@
           </div>
         </div>
       </section>
-      <section class="five-steps center">
+      <section id="five-steps-navigation" class="five-steps center">
         <div class="container-steps flex-direction">
           <div class="container-step">
             <div class="left-steps flex-direction">
@@ -329,4 +353,8 @@
     <script src="/js_files/translate.js"></script>
     <script src="/js_files/slider-tariff.js"></script>
     <script src="/js_files/link-application.js"></script>
+    <script src="/js_files/link-clients.js"></script>
+    <script src="/js_files/link-panels.js"></script>
+    <script src="/js_files/burger.js"></script>
+    <script src="/js_files/dark-light-theme-component-index.js"></script>
   </body>
