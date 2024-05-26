@@ -63,10 +63,16 @@
                   </div>
                 </div>
             </div>
-            <div class="img-profile-burger background-settings"></div>
-            <div id="dropdownMenuBurgers" class="dropdown-menu-burger">
+            <div class="img-profile-burger"></div>
+          <div id="dropdownMenuBurgers" class="dropdown-menu-burger">
+            <div class="login-register-menu">
               <a href="#" id="login">Login</a>
               <a href="/pages_html/registration.html" id="register">Register</a>
+          </div>
+          <div class="user-menu">
+              <span>Welcome, <span class="username-display"></span>!</span>  
+              <button id="logoutButton">Log out</button>
+          </div>
           </div>
             </nav>
             <div class="group-burger-profile">
@@ -77,8 +83,14 @@
               </div>
               <div class="img-profile background-settings"></div>
               <div id="dropdownMenu" class="dropdown-menu">
-                <a href="#" id="login">Login</a>
-                <a href="/pages_html/registration.html" id="register">Register</a>
+                <div class="login-register-menu-header">
+                  <a href="#">Login</a>
+                  <a href="/pages_html/registration.html" >Register</a>
+              </div>
+              <div class="user-menu-header">
+                  <span>Welcome, <span class="username-display-header"></span>!</span> 
+                  <button id="logoutButton-header">Log out</button>
+              </div>
             </div>
             </div>
             </div>
@@ -366,5 +378,5 @@
     <script src="/js_files/burger.js"></script>
     <script src="/js_files/dark-light-theme-component-index.js"></script>
     <script src="/js_files/dropmenu-profile.js"></script>
-    <script src="/js_files/dropmenu-profile-burger.js"></script>
+    <script src="/js_files/swap-menu.js"></script>
   </body>

@@ -15,6 +15,7 @@
 {
     position: relative;
     height: 1405px;
+    filter: brightness(0.9);
 }
 .form-registration
 {
@@ -26,11 +27,11 @@
 {
     width: 280px;
     border-radius: 10px;
-    border: 2px solid red; /* Задайте цвет границы здесь */
+    border: 3.5px solid #000; /* Задайте цвет границы здесь */
 }
 #middlename
 {
-    border: 2px solid white;
+    border: 1px solid rgb(162, 143, 143);
 }
 #agreement
 {

@@ -1,4 +1,4 @@
-const switchInputs = document.querySelectorAll('.switch-input');
+var switchInputs = document.querySelectorAll('.switch-input');
 const body = document.body;
 
 // Проверяем, есть ли сохраненное значение в локальном хранилище
