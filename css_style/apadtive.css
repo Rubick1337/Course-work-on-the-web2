@@ -413,6 +413,7 @@ header
   @media screen and (max-width:611px) {
     .front-welcome {
       top: 41%;
+      width: 97%;
     }
     .Text-header h3 {
       font-size: 15px;

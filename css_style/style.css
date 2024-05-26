@@ -142,6 +142,48 @@ body {
     height: 48px;
     background-image: url(../images/icon_profile.svg);
   }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 77px;
+    right: 10px; 
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+.dropdown-menu-burger {
+  display: none;
+  position: absolute;
+  top: 438px;
+  right: 96px; 
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dropdown-menu-burger a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-menu-burger a:hover {
+  background-color: #f0f0f0;
+}
   .img-logo {
     width: 182px;
     height: 51px;

@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var navigation = document.querySelector('.navigation');
     var overlay = document.querySelector('.overlay');
     var buttonsBurger = document.querySelector('.buttons-burger');
+    var profileBurger = document.querySelector('.img-profile-burger');
+    var dropdownMenu = document.getElementById('dropdownMenuBurgers');
 
     document.querySelector('.burger-menu').addEventListener('click', function() {
         this.classList.toggle('active');
@@ -19,16 +21,26 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    profileBurger.addEventListener('click', function(event) {
+        event.stopPropagation();
+        if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
+            dropdownMenu.style.display = 'block';
+        } else {
+            dropdownMenu.style.display = 'none';
+        }
+    });
+
     document.addEventListener('click', function(event) {
         var targetElement = event.target;
-        // console.log(targetElement);
         var isClickInsideBurgerMenu = burgerMenu.contains(targetElement);
-        var isClickInsideButtonsBurger = buttonsBurger.contains(targetElement);
+        var isClickInsideButtonsBurger = buttonsBurger && buttonsBurger.contains(targetElement);
+        var isClickInsideProfileBurger = profileBurger.contains(targetElement) || dropdownMenu.contains(targetElement);
         var isNavigation = targetElement.classList.contains('navigation');
-        if (!isClickInsideBurgerMenu && !isClickInsideButtonsBurger && !isNavigation) {
+        if (!isClickInsideBurgerMenu && !isClickInsideButtonsBurger && !isClickInsideProfileBurger && !isNavigation) {
             navigation.classList.remove('open');
             burgerMenu.classList.remove('active');
             overlay.classList.remove('open-overlay');
+            dropdownMenu.style.display = 'none';
         }
     });
 
@@ -36,5 +48,6 @@ document.addEventListener("DOMContentLoaded", function() {
         navigation.classList.remove('open');
         burgerMenu.classList.remove('active');
         overlay.classList.remove('open-overlay');
+        dropdownMenu.style.display = 'none';
     });
 });
