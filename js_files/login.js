@@ -40,6 +40,7 @@ function login(users) {
             passwordError.textContent = '';
             alert('Вход успешен');
             localStorage.setItem('username', user.nickname);
+            localStorage.setItem('role', user.role);
             window.location.href = "/pages_html/index_user.html";
         }
     });

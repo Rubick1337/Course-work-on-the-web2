@@ -435,6 +435,7 @@ fetch('/json/users.json')
       var nickname = document.getElementById('nickname').value;
       var  user = new User(email, password, phone, birthdate, firstname, lastname, middlename, nickname);
       localStorage.setItem('username', user.nickname);
+      localStorage.setItem('role', user.role);
       users.push(user);
       console.log(users);
       localStorage.setItem('users', JSON.stringify(user));

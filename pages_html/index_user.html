@@ -33,14 +33,14 @@
                   </div>
                 </div>
             </div>
-            <div class="img-logo background-settings"></div>    
+            <div class="img-logo background-settings"></div> 
             <nav class="navigation">
               <div class="line-burger-section"></div>
               <ul>
                 <li><a href="#services-navigation" data-i18n="services">Услуги</a></li>
                 <li><a href="#green-tariff-navigation" data-i18n="green_tariff_header">Зеленый тариф</a></li>
                 <li><a href="#clients-navigation" data-i18n="our_clients_header">Наши клиенты</a></li>
-                <li><a href="#five-steps-navigation" data-i18n="power_station_header">Электростанция</a></li>
+                <li class="hide-for-admin-steps"><a href="#five-steps-navigation" data-i18n="power_station_header">Электростанция</a></li>
               </ul>
               <div class="line-burger-section"></div>
               <div class="buttons-burger">
@@ -64,6 +64,7 @@
                 </div>
             </div>
             <div class="img-profile-burger"></div>
+            <div class="img-profile-admin-burger hidden"> </div>  
           <div id="dropdownMenuBurgers" class="dropdown-menu-burger">
             <div class="login-register-menu">
               <a href="/pages_html/login.html" id="login">Login</a>
@@ -82,6 +83,7 @@
                 <span class="line-burger"></span>
               </div>
               <div class="img-profile background-settings"></div>
+              <div class="img-profile-admin hidden"></div>  
               <div id="dropdownMenu" class="dropdown-menu">
                 <div class="login-register-menu-header">
                   <a href="/pages_html/login.html">Login</a>
@@ -327,23 +329,33 @@
       </section>
     </main>
     <footer class="background-settings background-footer">
+      <div class="footer-container-admin hidden">
+        <h2 data-i18n="admin_hello">Здравствуйте,Администратор</h2>
+        <div class="after-application">
+          <h3 data-i18n="privacy_policy">Политика <br>конфиденциальности:</h3>
+          <div class="img-logo no-margin background-settings"></div>
+          <div class="container-social-footer">
+            <div class="instagram-img background-settings"></div>
+            <div class="telegram-img background-settings"></div>
+            <div class="whats-up-img background-settings"></div>
+            <div class="facebook-img background-settings"></div>
+          </div>
+        </div>
+      </div>
       <div class="footer-container">
         <div class="application-container">
           <form class="application">
             <div class="title-application">
               <h2 data-i18n="leave_application">ОСТАВИТЬ ЗАЯВКУ</h2>
             </div>
-    
             <div class="form-group">
               <input type="text" id="name" name="name" required>
               <label for="name" data-i18n="name">Имя:</label>
             </div>
-    
             <div class="form-group">
               <input type="tel" id="phone" name="phone" required>
               <label for="phone" data-i18n="phone">Телефон:</label>
-            </div>
-    
+            </div>  
             <div class="consultation-footer">
               <div class="header-btn" id="application-link"></div>
               <h2 data-i18n="leave_application">оставить заявку</h2>
@@ -379,4 +391,5 @@
     <script src="/js_files/dark-light-theme-component-index.js"></script>
     <script src="/js_files/dropmenu-profile.js"></script>
     <script src="/js_files/swap-menu.js"></script>
+    <script src="/js_files/admin-section.js"></script>
   </body>

@@ -409,6 +409,11 @@ header
     .text-quote h2 {
       font-size: 21px;
     }
+    .footer-container-admin h2 
+    {
+      font-size: 32px;
+    }
+
   }
   @media screen and (max-width:611px) {
     .front-welcome {
@@ -432,6 +437,10 @@ header
     .map {
       width: 310px;
 
+    }
+    .footer-container-admin h2 
+    {
+      font-size: 22px;
     }
   }
 }
