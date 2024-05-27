@@ -64,21 +64,38 @@ fetch('/json/users.json')
           updateSubmitButtonState();
       });
     
-      birthdateInput.addEventListener('input', function() {
+      birthdateInput.addEventListener('blur', function() {
           validateBirthdate();
           updateSubmitButtonState();
       });
-    
-      passwordInput.addEventListener('blur', function() {
-          validatePassword();
-          updateSubmitButtonState();
-      });
+
     
       repeatPasswordInput.addEventListener('blur', function() {
-          validateRepeatPassword();
-          updateSubmitButtonState();
+        validateRepeatPassword();
+        updateSubmitButtonState();
+      });
+  
+      repeatPasswordInput.addEventListener('input', function() {
+        validateRepeatPassword();
+        updateSubmitButtonState();
       });
     
+      passwordInput.addEventListener('blur', function() {
+        validatePassword();
+        if (repeatPasswordInput.value !== '') {
+          validateRepeatPassword();
+        }
+        updateSubmitButtonState();
+      });
+  
+      passwordInput.addEventListener('input', function() {
+        validatePassword();
+        if (repeatPasswordInput.value !== '') {
+          validateRepeatPassword();
+        }
+        updateSubmitButtonState();
+      });
+
       firstNameInput.addEventListener('blur', function() {
           validateFirstName();
           updateSubmitButtonState();
@@ -179,35 +196,35 @@ fetch('/json/users.json')
       }
     
       function validatePassword() {
-          var password = passwordInput.value;
-          var passwordError = document.getElementById('passwordError');
-          var invalidPassword = false;
-          if (password.length < 7 || password.length >20) {
-            invalidPassword = true;
-              }
-              if (!/[A-Z]/.test(password) || !!/[А-Я]/.test(password)) {
-                invalidPassword = true;
-              }
-              // Проверка наличия строчной буквы
-              if (!/[a-z]/.test(password)) {
-                invalidPassword = true;
-              }
-              // Проверка наличия цифры
-              if (!/\d/.test(password)) {
-                invalidPassword = true;
-              }
-              if (!/[@$!%*?&]/.test(password)) {
-                invalidPassword = true;
-              }
+
+        var password = passwordInput.value;
+        console.log(password);
+        var passwordError = document.getElementById('passwordError');
+        var invalidPassword = false;
     
-              if (invalidPassword) {
-                passwordError.textContent = "Некорректно введен пароль";
-                passwordInput.style.borderColor = "red";
-            } else {
-                passwordError.textContent = "";
-                passwordInput.style.borderColor = "black";
-            }
-            
+        if (password.length < 7 || password.length > 20) {
+          invalidPassword = true;
+        }
+        if (!/[A-Z]/.test(password) || !!/[А-Я]/.test(password)) {
+          invalidPassword = true;
+        }
+        if (!/[a-z]/.test(password)) {
+          invalidPassword = true;
+        }
+        if (!/\d/.test(password)) {
+          invalidPassword = true;
+        }
+        if (!/[@$!%*?&]/.test(password)) {
+          invalidPassword = true;
+        }
+    
+        if (invalidPassword) {
+          passwordError.textContent = "Некорректно введен пароль";
+          passwordInput.style.borderColor = "red";
+        } else {
+          passwordError.textContent = "";
+          passwordInput.style.borderColor = "black";
+        }
       }
     
       function validateRepeatPassword() {
@@ -380,7 +397,7 @@ fetch('/json/users.json')
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     
-    function validatePassword(password) {
+    function validatePasswordRandom(password) {
       const hasLowercase = /[a-z]/.test(password);
       const hasUppercase = /[A-Z]/.test(password);
       const hasNumeric = /[0-9]/.test(password);
@@ -394,13 +411,16 @@ fetch('/json/users.json')
       var repeatPasswordError = document.getElementById('repeatPasswordError');
       var generatedPassword = generatePassword();
     
-      while (!validatePassword(generatedPassword)) {
+      while (!validatePasswordRandom(generatedPassword)) {
         generatedPassword = generatePassword();
       }
     
       password.value = generatedPassword;
       repeatpassword.value = generatedPassword;
       repeatPasswordError.textContent = "";
+      passwordError.textContent = "";
+      repeatpassword.style.borderColor = "black"
+      password.style.borderColor = "black"
       console.log(password.value);
     });
     
