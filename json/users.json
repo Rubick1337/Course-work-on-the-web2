@@ -42,6 +42,17 @@
       "middlename": "Александрович",
       "nickname": "user3",
       "role": ""
+    },
+    {
+      "mail": "user4@gmail.com",
+      "password": "password3",
+      "telephone": "+375294444444",
+      "birthdate": "2000-03-20",
+      "firstname": "Сергей",
+      "secondname": "Петров",
+      "middlename": "Александрович",
+      "nickname": "user4",
+      "role": ""
     }
   ]
   
