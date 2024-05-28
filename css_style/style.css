@@ -256,6 +256,9 @@ body {
   .header-btn:hover {
     background: #a9a32a;
   }
+  .header-btn:hover::after{
+    animation: moveArrow 1s ease-in-out;
+  }
   .instagram-img {
     width: 29.52px;
     height: 32.36px;
@@ -531,6 +534,9 @@ body {
   .consultation-btn:hover {
     background: #a9a32a;
   }
+.consultation-btn:hover::after{
+  animation: moveArrow 1s ease-in-out;
+}
   .consultation-black {
     margin-top: 60px;
     display: flex;

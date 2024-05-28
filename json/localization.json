@@ -486,5 +486,15 @@
               "consultation-panels":{
                 "en": "Our suns panels",
                 "ru": "Наши солнечные панели"
+              },
+              "Login":
+              {
+                "en": "Login",
+                "ru": "Авторизация"
+              },
+              "register-users":
+              {
+                "en": "Registers users",
+                "ru": "Зарегистрированные пользователи"
               }
   }

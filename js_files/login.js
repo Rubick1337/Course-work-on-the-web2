@@ -2,7 +2,7 @@
     var userslocal = JSON.parse(localStorage.getItem('users')) || [];
     var usersjson;
     var users = [];
-    
+    const lang = localStorage.getItem('lang') || 'ru';
     fetch('/json/users.json')
         .then(response => {
             if (!response.ok) {
@@ -30,12 +30,23 @@ function login(users) {
         const user = users.find(user => user.nickname === nickname);
 
         if (!user) {
-            nicknameError.textContent = 'Пользователь не найден';
+            // Выбираем сообщение об ошибке в зависимости от языка
+            if (lang === 'ru') {
+                nicknameError.textContent = 'Пользователь не найден';
+            } else {
+                nicknameError.textContent = 'User not found';
+            }
             passwordError.textContent = '';
         } else if (user.password !== password) {
-            passwordError.textContent = 'Неправильный пароль';
+            // Выбираем сообщение об ошибке в зависимости от языка
+            if (lang === 'ru') {
+                passwordError.textContent = 'Неправильный пароль';
+            } else {
+                passwordError.textContent = 'Incorrect password';
+            }
             nicknameError.textContent = '';
-        } else {
+        }
+        else {
             nicknameError.textContent = '';
             passwordError.textContent = '';
             alert('Вход успешен');

@@ -1,6 +1,7 @@
 var userslocal = JSON.parse(localStorage.getItem('users')); // Предполагая, что userslocal - это массив пользователей из локального хранилища
 var usersjson;
 var users = [];
+const lang = localStorage.getItem('lang') || 'ru';
 fetch('/json/users.json')
   .then(response => {
     if (!response.ok) {
@@ -135,12 +136,20 @@ fetch('/json/users.json')
                 invalidMailHard = true;
               }
     
-          if (invalidMail) {
-              errorMessage += "Email неверного формата. ";
-          }
-          if (invalidMailHard) {
-              errorMessage += "Email уже зарегистрирован.";
-          }
+              if (invalidMail) {
+                if (lang === 'ru') {
+                    errorMessage += "Email неверного формата. ";
+                } else {
+                    errorMessage += "Invalid email format. ";
+                }
+            }
+            if (invalidMailHard) {
+                if (lang === 'ru') {
+                    errorMessage += "Email уже зарегистрирован.";
+                } else {
+                    errorMessage += "Email already registered.";
+                }
+            }
              if (errorMessage !== "") {
               emailError.textContent = errorMessage;
               emailInput.style.borderColor = "red";
@@ -155,7 +164,11 @@ fetch('/json/users.json')
           var phoneError = document.getElementById('phoneError');
           var invalidPhone = !/^\+375\d{9}$/.test(phone); // Пример проверки формата номера телефона
           if (invalidPhone) {
-            phoneError.textContent = "Номер телефона должен быть в формате '+375123456789'";
+            if (lang === 'ru') {
+                phoneError.textContent = "Номер телефона должен быть в формате '+375123456789'";
+            } else {
+                phoneError.textContent = "Phone number must be in the format '+375123456789'";
+            }
             phoneInput.style.borderColor = "red";
         } else {
             phoneError.textContent = "";
@@ -179,17 +192,26 @@ fetch('/json/users.json')
       }
     
           if (invalidbirthdate) {
+            if (lang === 'ru') {
               birthdateError.textContent = "Некорректно введена дата рождения";
-              birthdateInput.style.borderColor = "red";
           } else {
+              birthdateError.textContent = "Incorrect birthdate format";
+          }
+          birthdateInput.style.borderColor = "red";
+          } 
+          else {
               birthdateError.textContent = "";
               birthdateInput.style.borderColor = "black";
           }
     
           if (invalidAge) {
-              ageError.textContent = "Вам должно быть больше 16 лет";
-              birthdateInput.style.borderColor = "red";
-          } else {
+            if (lang === 'ru') {
+                ageError.textContent = "Вам должно быть больше 16 лет";
+            } else {
+                ageError.textContent = "You must be over 16 years old";
+            }
+            birthdateInput.style.borderColor = "red";
+        } else {
               ageError.textContent = "";
               birthdateInput.style.borderColor = "black";
           }
@@ -219,8 +241,16 @@ fetch('/json/users.json')
         }
     
         if (invalidPassword) {
-          passwordError.textContent = "Некорректно введен пароль";
-          passwordInput.style.borderColor = "red";
+          if(lang === ru)
+            {
+              passwordError.textContent = "Некорректно введен пароль";
+            }
+            else
+            {
+              passwordError.textContent = "Incorrect input password";
+            }
+            passwordInput.style.borderColor = "red";
+
         } else {
           passwordError.textContent = "";
           passwordInput.style.borderColor = "black";
@@ -234,7 +264,14 @@ fetch('/json/users.json')
           var invalidPasswordTwo = password !== repeatPassword; // Проверка на совпадение паролей
     
           if (invalidPasswordTwo) {
-            repeatPasswordError.textContent = "Пароли не совпадают";
+            if(lang === ru)
+              {
+                repeatPasswordError.textContent = "Пароли не совпадают";
+              }
+              else
+              {
+                repeatPasswordError.textContent = "Passwords not queals";
+              }
             repeatPasswordInput.style.borderColor = "red";
         } else {
             repeatPasswordError.textContent = "";
@@ -249,7 +286,14 @@ fetch('/json/users.json')
           var invalidFirstName = firstName.trim() === ""; // Проверка на пустое значение
     
           if (invalidFirstName) {
-            firstNameError.textContent = "Введите имя";
+            if(lang === ru)
+              {
+                firstNameError.textContent = "Введите имя";
+              }
+              else
+              {
+                firstNameError.textContent = "Input name";
+              }
             firstNameInput.style.borderColor = "red";
         } else {
             firstNameError.textContent = "";
@@ -264,7 +308,14 @@ fetch('/json/users.json')
           var invalidLastName = lastName.trim() === ""; // Проверка на пустое значение
     
           if (invalidLastName) {
-            lastNameError.textContent = "Введите фамилию";
+            if(lang === ru)
+              {
+                lastNameError.textContent = "Введите фамилию";
+              }
+              else
+              {
+                lastNameError.textContent = "Input secondname";
+              }
             lastNameInput.style.borderColor = "red";
         } else {
             lastNameError.textContent = "";
@@ -293,10 +344,24 @@ fetch('/json/users.json')
       }
     
           if (invalidNickname) {
-              errorMessage += "Введите никнейм. ";
+            if(lang === ru)
+              {
+                errorMessage += "Введите никнейм. ";
+              }
+              else
+              {
+                errorMessage += "Input nickname. ";
+              }
           }
           if (invalidNicknameHard) {
-              errorMessage += "Никнейм занят.";
+            if(lang === ru)
+              {
+                errorMessage += "Никнейм занят.";
+              }
+              else
+              {
+                errorMessage += "Nickname already.";
+              }
           }
           if (errorMessage !== "") {
             nicknameError.textContent = errorMessage;

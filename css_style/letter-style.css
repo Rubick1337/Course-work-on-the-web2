@@ -15,6 +15,10 @@ body.dark-theme h6 {
 body.dark-theme .tab label {
   color: #fff;
 }
+body.dark-theme .text-contacts a 
+{
+  color: #fff;
+}
 .navigation a {
   color: #fff;
   text-align: center;

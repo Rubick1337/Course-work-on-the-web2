@@ -312,3 +312,72 @@ body {
 {
   display: none;
 }
+.buttons-burger
+{
+  display: none;
+}
+.img-profile-burger
+{
+  display: none;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 77px;
+  right: 10px; 
+  width: 172px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.login-register-menu
+{
+display: block;
+}
+.user-menu
+{
+display: none;
+gap: 5px;
+flex-direction: column;
+align-items: center;
+}
+.user-menu-header
+{
+display: none;
+gap: 5px;
+flex-direction: column;
+align-items: center;
+}
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+.dropdown-menu-burger {
+display: none;
+width: 172px;
+position: absolute;
+top: 438px;
+right: 70px;
+background-color: white;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 4px;
+overflow: hidden;
+}
+
+.dropdown-menu-burger a {
+display: block;
+padding: 10px 20px;
+text-decoration: none;
+color: #333;
+}
+
+.dropdown-menu-burger a:hover {
+background-color: #f0f0f0;
+}

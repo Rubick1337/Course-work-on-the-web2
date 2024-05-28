@@ -1,5 +1,6 @@
 var switchInputs = document.querySelectorAll('.switch-input');
 const body = document.body;
+console.log(switchInputs)
 
 // Проверяем, есть ли сохраненное значение в локальном хранилище
 const isDarkThemeEnabled = localStorage.getItem('darkThemeEnabled') === 'true';
@@ -12,6 +13,7 @@ if (isDarkThemeEnabled) {
 
 // Функция для обновления темы
 function updateTheme(isEnabled) {
+  console.log("m1")
   if (isEnabled) {
     body.classList.add('dark-theme');
     localStorage.setItem('darkThemeEnabled', 'true');

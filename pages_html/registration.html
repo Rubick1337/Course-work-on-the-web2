@@ -14,38 +14,90 @@
     <header>
         <div class="header-container background-settings">
           <div class="menu">
-              <div class="buttons">
-                  <div class="dropdown">
-                    <button class="dropbtn" type="button" id="button-selector">
+            <div class="buttons">
+                <label class="switch">
+                  <input type="checkbox" class="switch-input" />
+                  <span class="switch-slider"></span>
+                  <div class="moon"></div>
+                </label>
+                <div class="dropdown">
+                  <button class="dropbtn" type="button" id="button-selector">
+                    RU
+                  </button>
+                  <div class="dropdown-content">
+                    <button class="language-btn" type="button" id="button-ru">
                       RU
                     </button>
-                    <div class="dropdown-content">
-                      <button class="language-btn" type="button" id="button-ru">
-                        RU
-                      </button>
-                      <button class="language-btn" type="button" id="button-en">
-                        EN
-                      </button>
-                    </div>
+                    <button class="language-btn" type="button" id="button-en">
+                      EN
+                    </button>
                   </div>
+                </div>
+            </div>
+            <div class="img-logo background-settings"></div> 
+            <nav class="navigation">
+              <div class="line-burger-section"></div>
+              <ul>
+                <li><a href="/pages_html/index_user.html#services-navigation" data-i18n="services">Услуги</a></li>
+                <li><a href="/pages_html/index_user.html#green-tariff-navigation" data-i18n="green_tariff_header">Зеленый тариф</a></li>
+                <li><a href="/pages_html/index_user.html#clients-navigation" data-i18n="our_clients_header">Наши клиенты</a></li>
+                <li class="hide-for-admin-steps"><a href="#five-steps-navigation" data-i18n="power_station_header">Электростанция</a></li>
+              </ul>
+              <div class="line-burger-section"></div>
+              <div class="buttons-burger">
+                <label class="switch">
+                  <input type="checkbox" class="switch-input" />
+                  <span class="switch-slider"></span>
+                  <div class="moon"></div>
+                </label>
+                <div class="dropdown">
+                  <button class="dropbtn" type="button" id="button-selector">
+                    RU
+                  </button>
+                  <div class="dropdown-content">
+                    <button class="language-btn" type="button" id="button-ru-burger">
+                      RU
+                    </button>
+                    <button class="language-btn" type="button" id="button-en-burger">
+                      EN
+                    </button>
+                  </div>
+                </div>
+            </div>
+            <div class="img-profile-burger"></div>
+            <div class="img-profile-admin-burger hidden"> </div>  
+          <div id="dropdownMenuBurgers" class="dropdown-menu-burger">
+            <div class="login-register-menu">
+              <a href="/pages_html/login.html" id="login">Login</a>
+              <a href="/pages_html/registration.html" id="register">Register</a>
+          </div>
+          <div class="user-menu">
+              <span>Welcome, <span class="username-display"></span>!</span>  
+              <button id="logoutButton">Log out</button>
+          </div>
+          </div>
+            </nav>
+            <div class="group-burger-profile">
+              <div class="burger-menu">
+                <span class="line-burger"></span>
+                <span class="line-burger"></span>
+                <span class="line-burger"></span>
               </div>
-              <div class="img-logo background-settings"></div>    
-              <nav class="navigation">
-                <ul>
-                  <li><a href="/pages_html/index_user.html#services-navigation" data-i18n="services">Услуги</a></li>
-                  <li>
-                    <a href="/pages_html/index_user.html#green-tariff-navigation"data-i18n="green_tariff_header">Зеленый тариф</a>
-                  </li>
-                  <li>
-                    <a href="/pages_html/index_user.html#clients-navigation" data-i18n="our_clients_header">Наши клиенты</a>
-                  </li>
-                  <li>
-                    <a href="/pages_html/index_user.html#five-steps-navigation" data-i18n="power_station_header">Электростанция</a>
-                  </li>
-                </ul>
-              </nav>
-              <div class="img-profile background-settings"></div>  
+              <div class="img-profile background-settings"></div>
+              <div class="img-profile-admin hidden"></div>  
+              <div id="dropdownMenu" class="dropdown-menu">
+                <div class="login-register-menu-header">
+                  <a href="/pages_html/login.html">Login</a>
+                  <a href="/pages_html/registration.html" >Register</a>
               </div>
+              <div class="user-menu-header">
+                  <span>Welcome, <span class="username-display-header"></span>!</span> 
+                  <button id="logoutButton-header">Log out</button>
+              </div>
+            </div>
+            </div>
+            </div>
+            <div class="overlay"></div>
               <div class="registration">
                 <h1 data-i18n="registration" >Registration</h1>
                 <form id="registration-form">
@@ -117,6 +169,10 @@
       <script src="/js_files/registration.js"></script>
       <script src="/js_files/toogle-language.js"></script>
       <script src="/js_files/translate.js"></script>
-
+      <script src="/js_files/dropmenu-profile.js"></script>
+      <script src="/js_files/swap-menu.js"></script>
+      <script src="/js_files/admin-section.js"></script>
+      <script src="/js_files/burger.js"></script>
+      <script src="/js_files/dark-light-theme.js"></script>
 </body>
 </html>
