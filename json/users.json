@@ -30,7 +30,7 @@
       "secondname": "Иванов",
       "middlename": "Сергеевич",
       "nickname": "user2",
-      "role": ""
+      "role": "user"
     },
     {
       "mail": "user3@gmail.com",
@@ -41,7 +41,7 @@
       "secondname": "Петров",
       "middlename": "Александрович",
       "nickname": "user3",
-      "role": ""
+      "role": "user"
     },
     {
       "mail": "user4@gmail.com",
@@ -52,7 +52,7 @@
       "secondname": "Петров",
       "middlename": "Александрович",
       "nickname": "user4",
-      "role": ""
+      "role": "user"
     }
   ]
   

@@ -734,7 +734,49 @@ body.dark-theme .line-section {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 2px solid #161616;
+  width: 80%;
+  position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+body.dark-theme .modal-content
+{
+  background-color:#000;
+}
+.close {
+  position: absolute;
+  right: 19px;
+  top: 7px;
+  color: #1b1a1a;
+  float: right;
+  font-size: 47px;
+  font-weight: bold;
+  cursor: pointer;
+}
+body.dark-theme .close
+{
+  color:#f0f0f0;
+}
 #modal-content {
   background-color: #fefefe;
   margin: 15% auto;
@@ -773,4 +815,11 @@ body.dark-theme .line-section {
 .hidden
 {
   display: none;
+}
+.no-scroll {
+  overflow: hidden;
+}
+body.dark-theme #close-btn
+{
+  color:#f0f0f0;
 }

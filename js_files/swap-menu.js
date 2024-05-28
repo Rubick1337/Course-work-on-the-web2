@@ -29,7 +29,7 @@ update();
 logoutButtonHeader.addEventListener('click', function() {
     // Удаляем текущего пользователя из localStorage
     localStorage.removeItem('username');
-    localStorage.removeItem('role');
+    localStorage.setItem('role', '');
     // После выхода вызываем update, чтобы обновить интерфейс
     update();
     window.location.reload();
