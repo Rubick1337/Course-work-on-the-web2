@@ -138,6 +138,10 @@ header
     {
         width: 100%;
     }
+    .footer-container-admin h2 
+    {
+      font-size: 32px;
+    }
     .form-group input[type="text"]
     {
         width: 91%;
@@ -236,6 +240,10 @@ header
       .title-panel
       {
         width: 222px;
+      }
+      .footer-container-admin h2 
+      {
+        font-size: 22px;
       }
   }
 }

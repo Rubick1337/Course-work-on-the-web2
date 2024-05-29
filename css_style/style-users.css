@@ -168,7 +168,10 @@ body {
   text-decoration: none;
   color: #333;
 }
-
+.hidden
+{
+  display: none;
+}
 .dropdown-menu a:hover {
   background-color: #f0f0f0;
 }
@@ -261,4 +264,8 @@ body.dark-theme .title-users h2
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+.hidden
+{
+  display: none;
 }

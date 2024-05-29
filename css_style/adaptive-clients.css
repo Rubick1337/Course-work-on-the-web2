@@ -186,6 +186,10 @@
             {
                 display: none;
             }
+            .footer-container-admin h2 
+            {
+              font-size: 32px;
+            }
             .img-profile
             {
                 display: none;
@@ -309,6 +313,11 @@
             {
                 gap: 145px; 
             }
-            
+            @media screen and (max-width:511px) {
+              .footer-container-admin h2 
+              {
+                font-size: 22px;
+              }
+            }
           }
     }

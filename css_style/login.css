@@ -17,6 +17,9 @@
     height: 600px;
     filter: brightness(0.9);
 }
+body.dark-theme span {
+    color:#000;
+  }
 .form-login
 {
     display: flex;

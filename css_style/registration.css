@@ -48,6 +48,9 @@ body {
     height: 39px;
     background: burlywood;
 }
+body.dark-theme span {
+  color:#000;
+}
 #generate-nick, #generate-password
 {
     width: 74px;

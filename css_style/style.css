@@ -777,6 +777,9 @@ body.dark-theme .close
 {
   color:#f0f0f0;
 }
+body.dark-theme span {
+  color:#000;
+}
 #modal-content {
   background-color: #fefefe;
   margin: 15% auto;

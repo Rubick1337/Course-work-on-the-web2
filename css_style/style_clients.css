@@ -10,6 +10,9 @@ body {
     padding: 0;
     overflow-x: hidden;
   }
+  body.dark-theme span {
+    color:#000;
+  }
   body.dark-theme {
     color: #fff;
     background: #121212;
@@ -418,7 +421,10 @@ body {
     text-decoration: none;
     color: #333;
 }
-
+.hidden
+{
+  display: none;
+}
 .dropdown-menu a:hover {
     background-color: #f0f0f0;
 }
@@ -443,4 +449,18 @@ body {
 
 .dropdown-menu-burger a:hover {
   background-color: #f0f0f0;
+}
+.footer-container-admin
+{
+  height: 100%;
+  display: flex;
+  gap: 68px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.background-footer-admin
+{
+  background-image:url(/images/Rectangle13.png);
+  height:300px;
 }

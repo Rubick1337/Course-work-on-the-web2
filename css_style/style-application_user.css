@@ -4,6 +4,10 @@ body {
     padding: 0;
     overflow-x: hidden;
   }
+  .hidden
+{
+  display: none;
+}
   body.dark-theme {
     color: #fff;
     background: #121212;
@@ -355,7 +359,9 @@ align-items: center;
   text-decoration: none;
   color: #333;
 }
-
+body.dark-theme span {
+  color:#000;
+}
 .dropdown-menu a:hover {
   background-color: #f0f0f0;
 }
