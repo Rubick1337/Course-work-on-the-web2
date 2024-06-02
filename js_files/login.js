@@ -52,6 +52,7 @@ function login(users) {
             alert('Вход успешен');
             localStorage.setItem('username', user.nickname);
             localStorage.setItem('role', user.role);
+            console.log(user.role);
             window.location.href = "../index-page/index_user.html";
         }
     });
