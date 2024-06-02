@@ -52,7 +52,7 @@ function login(users) {
             alert('Вход успешен');
             localStorage.setItem('username', user.nickname);
             localStorage.setItem('role', user.role);
-            window.location.href = "/pages_html/index_user.html";
+            window.location.href = "../index-page/index_user.html";
         }
     });
 

@@ -515,7 +515,7 @@ fetch('/json/users.json')
       document.getElementById('middlename').value = "";
       document.getElementById('nickname').value = "";
       alert("Вы успешно зарегистрировались");
-      window.location.href = "/pages_html/index_user.html";
+      window.location.href = "../index-page/index_user.html";
     });
     
     password.addEventListener("paste", function(e) {

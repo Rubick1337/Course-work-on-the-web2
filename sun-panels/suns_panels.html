@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Solar</title>
-    <link rel="stylesheet" href="../css_style/letter-style-sun-panels.css" />
-    <link rel="stylesheet" href="../css_style/animation.css" />
-    <link rel="stylesheet" href="../css_style/style_sun_panels.css"/> 
-    <link rel="stylesheet" href="../css_style/adaptive-sun-panels.css" />
+    <link rel="stylesheet" href="../sun-panels/letter-style-sun-panels.css" />
+    <link rel="stylesheet" href="../common-style/animation.css" />
+    <link rel="stylesheet" href="../sun-panels/style_sun_panels.css"/> 
+    <link rel="stylesheet" href="../sun-panels/adaptive-sun-panels.css" />
 </head>
 <body>
     <header>
@@ -37,11 +37,11 @@
             <nav class="navigation">
               <div class="line-burger-section"></div>
               <ul>
-                <li><a href="/pages_html/index_user.html#services-navigation" data-i18n="services">Услуги</a></li>
-                <li><a href="/pages_html/index_user.html#green-tariff-navigation" data-i18n="green_tariff_header">Зеленый тариф</a></li>
-                <li><a href="/pages_html/index_user.html#clients-navigation" data-i18n="our_clients_header">Наши клиенты</a></li>
-                <li class="hide-for-admin-steps"><a href="#five-steps-navigation" data-i18n="power_station_header">Электростанция</a></li>
-                <li class="for-admin-users"><a href="/pages_html/users.html" data-i18n="user">Пользователи</a></li>
+                <li><a href="../index-page/index_user.html#services-navigation" data-i18n="services">Услуги</a></li>
+                <li><a href="../index-page/index_user.html#green-tariff-navigation" data-i18n="green_tariff_header">Зеленый тариф</a></li>
+                <li><a href="../index-page/index_user.html#clients-navigation" data-i18n="our_clients_header">Наши клиенты</a></li>
+                <li class="hide-for-admin-steps"><a href="../index-page/index_user.html#five-steps-navigation" data-i18n="power_station_header">Электростанция</a></li>
+                <li class="for-admin-users"><a href="../users-for-admin/users.html" data-i18n="user">Пользователи</a></li>
               </ul>
               <div class="line-burger-section"></div>
               <div class="buttons-burger">
@@ -68,8 +68,8 @@
             <div class="img-profile-admin-burger hidden"> </div>  
           <div id="dropdownMenuBurgers" class="dropdown-menu-burger">
             <div class="login-register-menu">
-              <a href="/pages_html/login.html" id="login">Login</a>
-              <a href="/pages_html/registration.html" id="register">Register</a>
+              <a href="../login/login.html" id="login">Login</a>
+              <a href="../registration/registration.html" id="register">Register</a>
           </div>
           <div class="user-menu">
               <span>Welcome, <span class="username-display"></span>!</span>  
@@ -87,8 +87,8 @@
               <div class="img-profile-admin hidden"></div>  
               <div id="dropdownMenu" class="dropdown-menu">
                 <div class="login-register-menu-header">
-                  <a href="/pages_html/login.html">Login</a>
-                  <a href="/pages_html/registration.html" >Register</a>
+                  <a href="../login/login.html" id="login">Login</a>
+                  <a href="../registration/registration.html" id="register">Register</a>
               </div>
               <div class="user-menu-header">
                   <span>Welcome, <span class="username-display-header"></span>!</span> 
@@ -177,6 +177,12 @@
             </div>
         </section>
       </main>
+      <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Вы должны быть авторизованы для доступа к этому разделу.</p>
+        </div>
+    </div>
       <footer class="background-settings background-footer">
         <div class="footer-container-admin hidden">
           <h2 data-i18n="admin_hello">Здравствуйте,Администратор</h2>

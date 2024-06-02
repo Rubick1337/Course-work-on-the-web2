@@ -32,5 +32,5 @@ logoutButtonHeader.addEventListener('click', function() {
     localStorage.setItem('role', '');
     // После выхода вызываем update, чтобы обновить интерфейс
     update();
-    window.location.href = '/pages_html/index_user.html';
+    window.location.href = "../index-page/index_user.html";
 });

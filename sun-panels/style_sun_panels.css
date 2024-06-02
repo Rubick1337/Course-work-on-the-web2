@@ -4,6 +4,56 @@
     height: 435px;
     background:url(/images/Frame44.png)
 }
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 2px solid #161616;
+  width: 80%;
+  position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+body.dark-theme .modal-content
+{
+  background-color:#000;
+}
+.close {
+  position: absolute;
+  right: 19px;
+  top: 7px;
+  color: #1b1a1a;
+  float: right;
+  font-size: 47px;
+  font-weight: bold;
+  cursor: pointer;
+}
+body.dark-theme .close
+{
+  color:#f0f0f0;
+}
+.footer-container-admin.hidden
+{
+  display: none;
+}
+body.dark-theme span {
+  color:#000;
+}
 body {
     max-width: 1920px;
     margin: 0 auto;
@@ -162,77 +212,75 @@ body {
     display: flex;
     justify-content: center;
 }
-.container-img-clients
+.img-panel-1
 {
-    padding-left: 70px;
+    background-image:url(../images/image3.png);
+    width: 385px;
+    height: 284px;
 }
-.img-client-1
+.img-panel-2
 {
-    background-image:url(../images/Rectangle21.jpg);
-    height: 345px;
-    width: 814px;
+    background-image:url(../images/image31.png);
+    width: 385px;
+    height: 284px;
 }
-.info-client {
-    margin-top: 54px;
-    gap: 13px;
-  }
-  .info-clients
-  {
-    width: 77%;
-  }
-  .location-dnepr
-  {
-    height: 66px;
-  }
-  .local-other
-  {
-    height: 66px;
-  }
-  .container-cleints
-  {
-    padding-top: 143px;
-    padding-bottom: 159px;
+.img-panel-3
+{
+    background-image:url(../images/image36.png);
+    width: 385px;
+    height: 284px;
+}
+.img-panel-4
+{
+    background-image:url(../images/image38.png);
+    width: 385px;
+    height: 284px;
+}
+.img-panel-5
+{
+    background-image:url(../images/image39.png);
+    width: 385px;
+    height: 304px;
+}
+.img-panel-6
+{
+    background-image:url(../images/image367.png);
+
+    width: 385px;
+    height: 279px;
+}
+.img-panel-7
+{
+    background-image:url(../images/image341.png);
+    width: 385px;
+    height: 306px;
+}
+.img-panel-8
+{
+    background-image:url(../images/image3145.png);
+    width: 385px;
+    height: 284px;
+}
+.panels
+{
     display: flex;
+    padding: 204px 90px;
+justify-content: center;
+align-items: center;
+align-content: center;
+gap: 50px;
+flex-wrap: wrap;
+}
+.group-panel
+{
+    display: flex;
+    width: 465px;
+    height: 479px;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    gap: 109px;
-  }
-  .title-client-description
-{
-  width: 91%;
-}
-.income
-{
-    width: 94%;
-}
-.img-client-2
-{
-    background-image:url(../images/Rectangle22.jpg);
-    height: 345px;
-    width: 814px;
-}
-.img-client-3
-{
-    background-image:url(../images/Rectangle24.jpg);
-    height: 345px;
-    width: 814px;  
-}
-.img-client-4
-{
-    background-image:url(../images/Rectangle23.jpg);
-    height: 345px;
-    width: 814px;  
-}
-.img-client-5
-{
-    background-image:url(../images/Rectangle25.jpg);
-    height: 345px;
-    width: 814px;  
-}
-.img-client-6
-{
-    background-image:url(../images/Rectangle26.jpg);
-    height: 345px;
-    width: 814px;  
+    gap: 3px;
+    border: 2px solid #ccc;
 }
 .background-footer
 {
@@ -370,14 +418,6 @@ body {
   .header-btn:hover {
     background: #a9a32a;
   }
-  .burger-menu
-  {
-    display: none;
-  }
-  .local-other br
-  {
-    display: none;
-  }
   .buttons-burger
   {
     display: none;
@@ -439,6 +479,7 @@ body {
   border-radius: 4px;
   overflow: hidden;
 }
+
 
 .dropdown-menu-burger a {
   display: block;

@@ -31,7 +31,7 @@ appLink.addEventListener('click', () => {
     if (userRole && (userRole === 'user' || userRole === 'admin')) {
         localStorage.setItem('name', nameInput.value);
         localStorage.setItem('phone', phoneInput.value);
-        window.location.href = '/pages_html/application_user.html';
+        window.location.href = '../applictation/application_user.html';
     } else {
         openModal();
     }
