@@ -169,3 +169,23 @@
 .img-slider-tarrif.show, .text-slider.show {
     transform: translateX(0);
 }
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-clients {
+    opacity: 0;
+    transform: translateX(-20%);
+    transition: opacity 0.4s ease-in-out, transform 1s ease-in-out;
+}
+.info-clients
+{
+    opacity: 0;
+    transform: translateX(20%);
+    transition: opacity 0.4s ease-in-out, transform 1s ease-in-out;
+}
+.img-clients.show, .info-clients.show {
+    opacity: 1; 
+    transform: translateX(0);
+}
