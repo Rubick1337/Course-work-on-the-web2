@@ -14,8 +14,12 @@
 .header-container
 {
     position: relative;
-    height: 600px;
+    height: 1000px;
     filter: brightness(0.9);
+}
+.form-login
+{
+  background: #00000085;
 }
 body.dark-theme span {
     color:#000;

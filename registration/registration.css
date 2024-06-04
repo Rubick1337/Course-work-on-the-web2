@@ -4,6 +4,10 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+.form-registration
+{
+  background: #00000085;
+}
 .registration
 {
     align-items: center;
@@ -33,7 +37,7 @@ body {
 {
     width: 280px;
     border-radius: 10px;
-    border: 3.5px solid #000; /* Задайте цвет границы здесь */
+    border: 3.5px solid #000; 
 }
 #middlename
 {

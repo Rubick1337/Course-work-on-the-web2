@@ -1,559 +1,524 @@
-var userslocal = JSON.parse(localStorage.getItem('users')); // Предполагая, что userslocal - это массив пользователей из локального хранилища
-var usersjson;
-var users = [];
-const lang = localStorage.getItem('lang') || 'ru';
-fetch('/json/users.json')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Ой, ошибка в fetch: ' + response.statusText);
-    }
-    return response.json();
-  })
-  .then(jsonData => {
-    usersjson = jsonData;
+document.addEventListener("DOMContentLoaded", function () {
+  const lang = localStorage.getItem('lang') || 'ru';
 
-    // Объединение массивов usersjson и userslocal
-    var usersfetch = usersjson.concat(userslocal);
-    users = usersfetch;
-    reg();
-  })
-  .catch(error => console.error('Ошибка при исполнении запроса: ', error));
-  function reg()
-  {
-    Register();
+  const emailInput = document.getElementById('mail');
+  const phoneInput = document.getElementById('phone');
+  const birthdateInput = document.getElementById('birthdate');
+  const passwordInput = document.getElementById('password');
+  const repeatPasswordInput = document.getElementById('repeatpassword');
+  const firstNameInput = document.getElementById('firstname');
+  const lastNameInput = document.getElementById('lastname');
+  const middleNameInput = document.getElementById('middlename');
+  const nicknameInput = document.getElementById('nickname');
+  const agreementCheckbox = document.getElementById('agreement');
+  const submitButton = document.getElementById('submit');
+
+  const emailError = document.getElementById('mailError');
+  const phoneError = document.getElementById('phoneError');
+  const birthdateError = document.getElementById('birthdateError');
+  const passwordError = document.getElementById('passwordError');
+  const repeatPasswordError = document.getElementById('repeatPasswordError');
+  const firstNameError = document.getElementById('firstnameError');
+  const lastNameError = document.getElementById('lastnameError');
+  const nicknameError = document.getElementById('nicknameError');
+  const agreementError = document.getElementById('agreementError');
+
+  const userslocal = JSON.parse(localStorage.getItem('users')) || [];
+  let users = [];
+
+  fetch('/json/users.json')
+      .then(response => response.json())
+      .then(jsonData => {
+          users = jsonData.concat(userslocal);
+      })
+      .catch(error => console.error('Ошибка при исполнении запроса: ', error));
+
+  function showError(element, message) {
+      element.textContent = message;
+      element.classList.add('show');
   }
-  function Register()
-  {
 
-    function User(mail, password, telephone, birthdate, firstname, secondname, middlename, nickname,role) {
-      this.mail = mail;
-      this.password = password;
-      this.telephone = telephone;
-      this.birthdate = birthdate;
-      this.firstname = firstname;
-      this.secondname = secondname;
-      this.middlename = middlename;
-      this.nickname = nickname;
-      this.role = "";
-    }
-    
-    let button = document.querySelector("#submit");
-    button.disabled = true; // Делаем кнопку "Зарегистрироваться" неактивной изначально
-  
-      var emailInput = document.getElementById('mail');
-      var phoneInput = document.getElementById('phone');
-      var birthdateInput = document.getElementById('birthdate');
-      var passwordInput = document.getElementById('password');
-      var repeatPasswordInput = document.getElementById('repeatpassword');
-      var firstNameInput = document.getElementById('firstname');
-      var lastNameInput = document.getElementById('lastname');
-      var middleNameInput = document.getElementById('middlename');
-      var nicknameInput = document.getElementById('nickname');
-      var agreementCheckbox = document.getElementById('agreement');
-      var submitButton = document.getElementById('submit');
-    
-    
-      console.log(users);
-      emailInput.addEventListener('blur', function() {
-        console.log("gqe")
-          validateEmail();
-          updateSubmitButtonState();
-      });
-    
-      phoneInput.addEventListener('blur', function() {
-          validatePhone();
-          updateSubmitButtonState();
-      });
-    
-      birthdateInput.addEventListener('blur', function() {
-          validateBirthdate();
-          updateSubmitButtonState();
-      });
+  function hideError(element) {
+      element.textContent = "";
+      element.classList.remove('show');
+  }
 
-    
-      repeatPasswordInput.addEventListener('blur', function() {
-        validateRepeatPassword();
-        updateSubmitButtonState();
-      });
-  
-      repeatPasswordInput.addEventListener('input', function() {
-        validateRepeatPassword();
-        updateSubmitButtonState();
-      });
-    
-      passwordInput.addEventListener('blur', function() {
-        validatePassword();
-        if (repeatPasswordInput.value !== '') {
-          validateRepeatPassword();
-        }
-        updateSubmitButtonState();
-      });
-  
-      passwordInput.addEventListener('input', function() {
-        validatePassword();
-        if (repeatPasswordInput.value !== '') {
-          validateRepeatPassword();
-        }
-        updateSubmitButtonState();
-      });
+  function validateEmail() {
+      const email = emailInput.value.trim();
+      let errorMessage = "";
 
-      firstNameInput.addEventListener('blur', function() {
-          validateFirstName();
-          updateSubmitButtonState();
-      });
-    
-      lastNameInput.addEventListener('blur', function() {
-          validateLastName();
-          updateSubmitButtonState();
-      });
-    
-      nicknameInput.addEventListener('blur', function() {
-          validateNickname();
-          updateSubmitButtonState();
-      });
-    
-      agreementCheckbox.addEventListener('change', function() {
-          validateAgreement();
-          updateSubmitButtonState();
-      });
-    
-      function validateEmail() {
-          var email = emailInput.value;
-          var invalidMailHard = false;
-          var invalidMail = false;
-          var emailError = document.getElementById('mailError');
-          var errorMessage = "";
-    
-          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-              invalidMail = true;
-            }
-            var existingUser = users.find(function(user) {
-              return user.mail === email;
-            });
-              if (existingUser) {
-                console.log("занят");
-                invalidMailHard = true;
-              }
-    
-              if (invalidMail) {
-                if (lang === 'ru') {
-                    errorMessage += "Email неверного формата. ";
-                } else {
-                    errorMessage += "Invalid email format. ";
-                }
-            }
-            if (invalidMailHard) {
-                if (lang === 'ru') {
-                    errorMessage += "Email уже зарегистрирован.";
-                } else {
-                    errorMessage += "Email already registered.";
-                }
-            }
-             if (errorMessage !== "") {
-              emailError.textContent = errorMessage;
-              emailInput.style.borderColor = "red";
-                  } else {
-                    emailError.textContent = "";
-                    emailInput.style.borderColor = "black";
-                  }
-      }
-    
-      function validatePhone() {
-          var phone = phoneInput.value;
-          var phoneError = document.getElementById('phoneError');
-          var invalidPhone = !/^\+375\d{9}$/.test(phone); // Пример проверки формата номера телефона
-          if (invalidPhone) {
-            if (lang === 'ru') {
-                phoneError.textContent = "Номер телефона должен быть в формате '+375123456789'";
-            } else {
-                phoneError.textContent = "Phone number must be in the format '+375123456789'";
-            }
-            phoneInput.style.borderColor = "red";
-        } else {
-            phoneError.textContent = "";
-            phoneInput.style.borderColor = "black";
-        }
-      }
-    
-      function validateBirthdate() {
-          var birthdate = birthdateInput.value;
-            const date = new Date(birthdate);
-      const year = date.getFullYear();
-      const currentyear = new Date().getFullYear();
-      var invalidbirthdate = false;
-      var invalidAge = false;
-          var birthdateError = document.getElementById('birthdateError');
-          var ageError = document.getElementById('ageError');
-      if (!(1940 < year) || year > currentyear) {
-        invalidbirthdate = true;
-      } else if (!(year < currentyear - 16)) {
-        invalidAge = true;
-      }
-    
-          if (invalidbirthdate) {
-            if (lang === 'ru') {
-              birthdateError.textContent = "Некорректно введена дата рождения";
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+          if (lang === 'ru') {
+              errorMessage += "Email неверного формата. ";
           } else {
-              birthdateError.textContent = "Incorrect birthdate format";
-          }
-          birthdateInput.style.borderColor = "red";
-          } 
-          else {
-              birthdateError.textContent = "";
-              birthdateInput.style.borderColor = "black";
-          }
-    
-          if (invalidAge) {
-            if (lang === 'ru') {
-                ageError.textContent = "Вам должно быть больше 16 лет";
-            } else {
-                ageError.textContent = "You must be over 16 years old";
-            }
-            birthdateInput.style.borderColor = "red";
-        } else {
-              ageError.textContent = "";
-              birthdateInput.style.borderColor = "black";
+              errorMessage += "Invalid email format. ";
           }
       }
-    
-      function validatePassword() {
 
-        var password = passwordInput.value;
-        console.log(password);
-        var passwordError = document.getElementById('passwordError');
-        var invalidPassword = false;
-    
-        if (password.length < 7 || password.length > 20) {
-          invalidPassword = true;
-        }
-        if (!/[A-Z]/.test(password) || !!/[А-Я]/.test(password)) {
-          invalidPassword = true;
-        }
-        if (!/[a-z]/.test(password)) {
-          invalidPassword = true;
-        }
-        if (!/\d/.test(password)) {
-          invalidPassword = true;
-        }
-        if (!/[@$!%*?&]/.test(password)) {
-          invalidPassword = true;
-        }
-    
-        if (invalidPassword) {
-          if(lang === ru)
-            {
-              passwordError.textContent = "Некорректно введен пароль";
-            }
-            else
-            {
-              passwordError.textContent = "Incorrect input password";
-            }
-            passwordInput.style.borderColor = "red";
+      if (users.some(user => user.mail === email)) {
+          if (lang === 'ru') {
+              errorMessage += "Email уже зарегистрирован.";
+          } else {
+              errorMessage += "Email already registered.";
+          }
+      }
 
-        } else {
-          passwordError.textContent = "";
-          passwordInput.style.borderColor = "black";
-        }
+      if (errorMessage) {
+          showError(emailError, errorMessage);
+          emailInput.classList.add('error');
+      } else {
+          hideError(emailError);
+          emailInput.classList.remove('error');
       }
-    
-      function validateRepeatPassword() {
-          var password = passwordInput.value;
-          var repeatPassword = repeatPasswordInput.value;
-          var repeatPasswordError = document.getElementById('repeatPasswordError');
-          var invalidPasswordTwo = password !== repeatPassword; // Проверка на совпадение паролей
-    
-          if (invalidPasswordTwo) {
-            if(lang === ru)
-              {
-                repeatPasswordError.textContent = "Пароли не совпадают";
-              }
-              else
-              {
-                repeatPasswordError.textContent = "Passwords not queals";
-              }
-            repeatPasswordInput.style.borderColor = "red";
-        } else {
-            repeatPasswordError.textContent = "";
-            repeatPasswordInput.style.borderColor = "black";
-        }
-        
-      }
-    
-      function validateFirstName() {
-          var firstName = firstNameInput.value;
-          var firstNameError = document.getElementById('firstnameError');
-          var invalidFirstName = firstName.trim() === ""; // Проверка на пустое значение
-    
-          if (invalidFirstName) {
-            if(lang === ru)
-              {
-                firstNameError.textContent = "Введите имя";
-              }
-              else
-              {
-                firstNameError.textContent = "Input name";
-              }
-            firstNameInput.style.borderColor = "red";
-        } else {
-            firstNameError.textContent = "";
-            firstNameInput.style.borderColor = "black";
-        }
-        
-      }
-    
-      function validateLastName() {
-          var lastName = lastNameInput.value;
-          var lastNameError = document.getElementById('lastnameError');
-          var invalidLastName = lastName.trim() === ""; // Проверка на пустое значение
-    
-          if (invalidLastName) {
-            if(lang === ru)
-              {
-                lastNameError.textContent = "Введите фамилию";
-              }
-              else
-              {
-                lastNameError.textContent = "Input secondname";
-              }
-            lastNameInput.style.borderColor = "red";
-        } else {
-            lastNameError.textContent = "";
-            lastNameInput.style.borderColor = "black";
-        }
-        
-      }
-    
-      function validateNickname() {
-          var nickname = nicknameInput.value;
-          var invalidNicknameHard = false;
-          var invalidNickname = false;
-          var nicknameError = document.getElementById('nicknameError');
-          var errorMessage = "";
-    // Проверка на пустое значение
-      if (nickname.trim() === "") {
-        invalidNickname = true;
-      }
-      var existingNickname = users.find(function(user) {
-        return user.nickname === nickname;
-      });
-    
-      if (existingNickname) {
-        console.log("занят");
-        invalidNicknameHard = true;
-      }
-    
-          if (invalidNickname) {
-            if(lang === ru)
-              {
-                errorMessage += "Введите никнейм. ";
-              }
-              else
-              {
-                errorMessage += "Input nickname. ";
-              }
+  }
+
+  function validatePhone() {
+      const phone = phoneInput.value.trim();
+      const phoneRegex = /^\+375\d{9}$/;
+      let errorMessage = "";
+
+      if (!phoneRegex.test(phone)) {
+          if (lang === 'ru') {
+              errorMessage = "Номер телефона должен быть в формате '+375123456789'";
+          } else {
+              errorMessage = "Phone number must be in the format '+375123456789'";
           }
-          if (invalidNicknameHard) {
-            if(lang === ru)
-              {
-                errorMessage += "Никнейм занят.";
-              }
-              else
-              {
-                errorMessage += "Nickname already.";
-              }
+      }
+
+      if (errorMessage) {
+          showError(phoneError, errorMessage);
+          phoneInput.classList.add('error');
+      } else {
+          hideError(phoneError);
+          phoneInput.classList.remove('error');
+      }
+  }
+
+  function validateBirthdate() {
+      const birthdate = birthdateInput.value;
+      const date = new Date(birthdate);
+      const year = date.getFullYear();
+      const currentYear = new Date().getFullYear();
+      let errorMessage = "";
+
+      if (year < 1950 || year > currentYear) {
+          if (lang === 'ru') {
+              errorMessage += "Некорректно введена дата рождения. ";
+          } else {
+              errorMessage += "Incorrect birthdate format. ";
           }
-          if (errorMessage !== "") {
-            nicknameError.textContent = errorMessage;
-            nicknameInput.style.borderColor = "red";
-                } else {
-                  nicknameError.textContent = "";
-                  nicknameInput.style.borderColor = "black";
-                }
       }
-    
-      function validateAgreement() {
-          var agreementChecked = agreementCheckbox.checked;
-          var agreementError = document.getElementById('agreementError');
-          var invalidAgreement = !agreementChecked; // Проверка на принятие соглашения
-    
-          agreementError.textContent = invalidAgreement ? "Необходимо принять соглашение" : "";
+
+      if (currentYear - year < 16) {
+          if (lang === 'ru') {
+              errorMessage += "Вам должно быть больше 16 лет.";
+          } else {
+              errorMessage += "You must be over 16 years old.";
+          }
       }
-    
-      function updateSubmitButtonState() {
-          var isFormValid = validateForm();
-          submitButton.disabled = !isFormValid;
+
+      if (errorMessage) {
+          showError(birthdateError, errorMessage);
+          birthdateInput.classList.add('error');
+      } else {
+          hideError(birthdateError);
+          birthdateInput.classList.remove('error');
       }
-    
-      function updateSubmitButtonState() {
-        var isFormValid = validateForm();
-        submitButton.disabled = !isFormValid;
-        
-        if (isFormValid && agreementCheckbox.checked) {
-            button.disabled = false; // Включаем кнопку, если форма валидна и согласие дано
+  }
+
+  function validatePassword() {
+      const password = passwordInput.value;
+      let errorMessage = "";
+
+      if (password.length < 7 || password.length > 20) {
+          if (lang === 'ru') {
+              errorMessage += "Пароль должен быть от 7 до 20 символов. ";
+          } else {
+              errorMessage += "Password must be between 7 and 20 characters. ";
+          }
+      }
+      if (!/[A-Z]/.test(password)) {
+          if (lang === 'ru') {
+              errorMessage += "Пароль должен содержать хотя бы одну заглавную букву. ";
+          } else {
+              errorMessage += "Password must contain at least one uppercase letter. ";
+          }
+      }
+      if (!/[a-z]/.test(password)) {
+          if (lang === 'ru') {
+              errorMessage += "Пароль должен содержать хотя бы одну строчную букву. ";
+          } else {
+              errorMessage += "Password must contain at least one lowercase letter. ";
+          }
+      }
+      if (!/\d/.test(password)) {
+          if (lang === 'ru') {
+              errorMessage += "Пароль должен содержать хотя бы одну цифру. ";
+          } else {
+              errorMessage += "Password must contain at least one digit. ";
+          }
+      }
+      if (!/[@$!%*?&]/.test(password)) {
+          if (lang === 'ru') {
+              errorMessage += "Пароль должен содержать хотя бы один специальный символ. ";
+          } else {
+              errorMessage += "Password must contain at least one special character. ";
+          }
+      }
+
+      if (errorMessage) {
+          showError(passwordError, errorMessage);
+          passwordInput.classList.add('error');
+      } else {
+          hideError(passwordError);
+          passwordInput.classList.remove('error');
+      }
+
+
+      validateRepeatPassword();
+  }
+
+  function validateRepeatPassword() {
+      const password = passwordInput.value;
+      const repeatPassword = repeatPasswordInput.value;
+      let errorMessage = "";
+
+      if (password !== repeatPassword) {
+          if (lang === 'ru') {
+              errorMessage = "Пароли не совпадают.";
+          } else {
+              errorMessage = "Passwords do not match.";
+          }
+      }
+
+      if (errorMessage) {
+          showError(repeatPasswordError, errorMessage);
+          repeatPasswordInput.classList.add('error');
+      } else {
+          hideError(repeatPasswordError);
+          repeatPasswordInput.classList.remove('error');
+      }
+  }
+
+  function validateFirstName() {
+      const firstName = firstNameInput.value.trim();
+      let errorMessage = "";
+
+      if (firstName === "") {
+          if (lang === 'ru') {
+              errorMessage = "Введите имя.";
+          } else {
+              errorMessage = "Enter first name.";
+          }
+      }
+
+      if (errorMessage) {
+          showError(firstNameError, errorMessage);
+          firstNameInput.classList.add('error');
+      } else {
+          hideError(firstNameError);
+          firstNameInput.classList.remove('error');
+      }
+  }
+
+  function validateLastName() {
+      const lastName = lastNameInput.value.trim();
+      let errorMessage = "";
+
+      if (lastName === "") {
+          if (lang === 'ru') {
+              errorMessage = "Введите фамилию.";
+          } else {
+              errorMessage = "Enter last name.";
+          }
+      }
+
+      if (errorMessage) {
+          showError(lastNameError, errorMessage);
+          lastNameInput.classList.add('error');
+      } else {
+          hideError(lastNameError);
+          lastNameInput.classList.remove('error');
+      }
+  }
+
+  function validateNickname() {
+      const nickname = nicknameInput.value.trim();
+      let errorMessage = "";
+
+      if (nickname === "") {
+          if (lang === 'ru') {
+              errorMessage += "Введите никнейм. ";
+          } else {
+              errorMessage += "Enter nickname. ";
+          }
+      }
+
+      if (users.some(user => user.nickname === nickname)) {
+          if (lang === 'ru') {
+              errorMessage += "Никнейм уже занят.";
+          } else {
+              errorMessage += "Nickname already taken.";
+          }
+      }
+
+      if (errorMessage) {
+          showError(nicknameError, errorMessage);
+          nicknameInput.classList.add('error');
+      } else {
+          hideError(nicknameError);
+          nicknameInput.classList.remove('error');
+      }
+  }
+
+  function validateAgreement() {
+      let errorMessage = "";
+
+      if (!agreementCheckbox.checked) {
+           if (lang === 'ru') {
+            errorMessage = "Необходимо принять соглашение.";
         } else {
-            button.disabled = true; // Иначе отключаем кнопку
+            errorMessage = "You must accept the agreement.";
         }
     }
-    
-    function validateForm() {
-        // Проверяем наличие непустых значений во всех полях формы
-        var inputs = [emailInput, phoneInput, birthdateInput, passwordInput, repeatPasswordInput, firstNameInput, lastNameInput, middleNameInput, nicknameInput];
-        for (var i = 0; i < inputs.length; i++) {
-            if (inputs[i].value.trim() === '') {
-                return false; // Если хоть одно поле пустое, возвращаем false
-            }
-        }
-        return true; // Возвращаем true, если все поля заполнены
+
+    if (errorMessage) {
+        showError(agreementError, errorMessage);
+    } else {
+        hideError(agreementError);
     }
-    
-    function generateRandomNickname() {
-      const adjectives = ["Red", "Blue", "Green", "Yellow", "Purple", "Orange", "Pink", "Black", "White"];
-      const nouns = ["Cat", "Dog", "Bird", "Lion", "Tiger", "Elephant", "Monkey", "Snake", "Bear"];
-    
-      const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
-      const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
-    
-      return randomAdjective + randomNoun;
+}
+
+function updateSubmitButtonState() {
+    const isFormValid = [
+        emailInput,
+        phoneInput,
+        birthdateInput,
+        passwordInput,
+        repeatPasswordInput,
+        firstNameInput,
+        lastNameInput,
+        nicknameInput
+    ].every(input => !input.classList.contains('error'));
+
+    submitButton.disabled = !isFormValid || !agreementCheckbox.checked;
+}
+
+emailInput.addEventListener('blur', function() {
+    validateEmail();
+    updateSubmitButtonState();
+});
+phoneInput.addEventListener('blur', function() {
+    validatePhone();
+    updateSubmitButtonState();
+});
+birthdateInput.addEventListener('blur', function() {
+    validateBirthdate();
+    updateSubmitButtonState();
+});
+passwordInput.addEventListener('blur', function() {
+    validatePassword();
+    updateSubmitButtonState();
+});
+repeatPasswordInput.addEventListener('blur', function() {
+    validateRepeatPassword();
+    updateSubmitButtonState();
+});
+firstNameInput.addEventListener('blur', function() {
+    validateFirstName();
+    updateSubmitButtonState();
+});
+lastNameInput.addEventListener('blur', function() {
+    validateLastName();
+    updateSubmitButtonState();
+});
+nicknameInput.addEventListener('blur', function() {
+    validateNickname();
+    updateSubmitButtonState();
+});
+agreementCheckbox.addEventListener('change', function() {
+    validateAgreement();
+    updateSubmitButtonState();
+});
+
+emailInput.addEventListener('input', updateSubmitButtonState);
+phoneInput.addEventListener('input', updateSubmitButtonState);
+birthdateInput.addEventListener('input', updateSubmitButtonState);
+passwordInput.addEventListener('input', function() {
+    validatePassword();
+    validateRepeatPassword();
+    updateSubmitButtonState();
+});
+repeatPasswordInput.addEventListener('input', function() {
+    validatePassword();
+    validateRepeatPassword();
+    updateSubmitButtonState();
+});
+firstNameInput.addEventListener('input', updateSubmitButtonState);
+lastNameInput.addEventListener('input', updateSubmitButtonState);
+nicknameInput.addEventListener('input', updateSubmitButtonState);
+agreementCheckbox.addEventListener('change', updateSubmitButtonState);
+
+submitButton.addEventListener('click', function () {
+    if (!submitButton.disabled) {
+        const user = {
+            mail: emailInput.value.trim(),
+            password: passwordInput.value.trim(),
+            telephone: phoneInput.value.trim(),
+            birthdate: birthdateInput.value.trim(),
+            firstname: firstNameInput.value.trim(),
+            secondname: lastNameInput.value.trim(),
+            middlename: middleNameInput.value.trim(),
+            nickname: nicknameInput.value.trim(),
+            role: "user"
+        };
+
+        users.push(user);
+        localStorage.setItem('users', JSON.stringify(users));
+        localStorage.setItem('username', user.nickname);
+        localStorage.setItem('role', user.role);
+
+        // Очищаем поля формы
+        emailInput.value = "";
+        phoneInput.value = "";
+        birthdateInput.value = "";
+        passwordInput.value = "";
+        repeatPasswordInput.value = "";
+        firstNameInput.value = "";
+        lastNameInput.value = "";
+        middleNameInput.value = "";
+        nicknameInput.value = "";
+        agreementCheckbox.checked = false;
+
+        // Перенаправляем пользователя на главную страницу или страницу пользователя
+        alert(lang === 'ru' ? "Вы успешно зарегистрировались" : "Registration successful");
+        window.location.href = "../index-page/index_user.html";
     }
-    
-    var generateButton = document.getElementById('generate-nick');
-    generateButton.addEventListener("click", () => {
-      var nickname_random = generateRandomNickname();
-      console.log(nickname_random);
-      var nickname = document.getElementById('nickname');
-      nickname.value = nickname_random;
-      nicknameError.textContent = "";
-      console.log(nickname)
-    });
-    
-    function generatePassword() {
-      const minLength = 8; // Минимальная длина пароля
-      const maxLength = 20; // Максимальная длина пароля
-      const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-      const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      const numericChars = "0123456789";
-      const specialChars = "!@#$%^&*()_+-=";
-    
-      const length = getRandomNumber(minLength, maxLength);
-      let password = "";
-    
-      // Гарантированное включение по одному символу каждого типа
-      password += getRandomChar(lowercaseChars);
-      password += getRandomChar(uppercaseChars);
-      password += getRandomChar(numericChars);
-      password += getRandomChar(specialChars);
-    
-      // Генерация остальных символов пароля
-      for (let i = 4; i < length; i++) {
+});
+
+// Генерация случайного никнейма
+function generateRandomNickname() {
+    const adjectives = ["Red", "Blue", "Green", "Yellow", "Purple", "Orange", "Pink", "Black", "White"];
+    const nouns = ["Cat", "Dog", "Bird", "Lion", "Tiger", "Elephant", "Monkey", "Snake", "Bear"];
+
+    const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+    const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+
+    return randomAdjective + randomNoun;
+}
+
+const generateNicknameButton = document.getElementById('generate-nick');
+generateNicknameButton.addEventListener("click", function () {
+    const nickname = generateRandomNickname();
+    nicknameInput.value = nickname;
+    nicknameError.textContent = "";
+    nicknameInput.style.borderColor = "black";
+    updateSubmitButtonState();
+});
+
+// Генерация случайного пароля
+function generatePassword() {
+    const minLength = 8;
+    const maxLength = 20;
+    const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+    const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const numericChars = "0123456789";
+    const specialChars = "!@#$%^&*()_+-=";
+
+    const length = getRandomNumber(minLength, maxLength);
+    let password = "";
+
+    // Гарантированное включение по одному символу каждого типа
+    password += getRandomChar(lowercaseChars);
+    password += getRandomChar(uppercaseChars);
+    password += getRandomChar(numericChars);
+    password += getRandomChar(specialChars);
+
+    // Генерация остальных символов пароля
+    for (let i = 4; i < length; i++) {
         const charsets = [lowercaseChars, uppercaseChars, numericChars, specialChars];
         const randomIndex = Math.floor(Math.random() * charsets.length);
         password += getRandomChar(charsets[randomIndex]);
-      }
-      return password;
     }
-    
-    function getRandomChar(charset) {
-      const randomIndex = Math.floor(Math.random() * charset.length);
-      return charset.charAt(randomIndex);
-    }
-    
-    function getRandomNumber(min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-    
-    function validatePasswordRandom(password) {
-      const hasLowercase = /[a-z]/.test(password);
-      const hasUppercase = /[A-Z]/.test(password);
-      const hasNumeric = /[0-9]/.test(password);
-      const hasSpecial = /[!@#$%^&*()_+\-=]/.test(password);
-    
-      return hasLowercase && hasUppercase && hasNumeric && hasSpecial;
-    }
-    
-    var generateButtonpassword = document.getElementById('generate-password');
-    generateButtonpassword.addEventListener("click", () => {
-      var repeatPasswordError = document.getElementById('repeatPasswordError');
-      var generatedPassword = generatePassword();
-    
-      while (!validatePasswordRandom(generatedPassword)) {
+
+    return password;
+}
+
+function getRandomChar(charset) {
+    const randomIndex = Math.floor(Math.random() * charset.length);
+    return charset.charAt(randomIndex);
+}
+
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function validatePasswordRandom(password) {
+    const hasLowercase = /[a-z]/.test(password);
+    const hasUppercase = /[A-Z]/.test(password);
+    const hasNumeric = /[0-9]/.test(password);
+    const hasSpecial = /[!@#$%^&*()_+\-=]/.test(password);
+
+    return hasLowercase && hasUppercase && hasNumeric && hasSpecial;
+}
+
+const generatePasswordButton = document.getElementById('generate-password');
+generatePasswordButton.addEventListener("click", function () {
+    let generatedPassword = generatePassword();
+
+    while (!validatePasswordRandom(generatedPassword)) {
         generatedPassword = generatePassword();
-      }
-    
-      password.value = generatedPassword;
-      repeatpassword.value = generatedPassword;
-      repeatPasswordError.textContent = "";
-      passwordError.textContent = "";
-      repeatpassword.style.borderColor = "black"
-      password.style.borderColor = "black"
-      console.log(password.value);
-    });
-    
-    button.addEventListener("click", () => {
-      var email = document.getElementById('mail').value;
-      var password = document.getElementById('password').value;
-      var phone = document.getElementById('phone').value;
-      var birthdate = document.getElementById('birthdate').value;
-      var firstname = document.getElementById('firstname').value;
-      var lastname = document.getElementById('lastname').value;
-      var middlename = document.getElementById('middlename').value;
-      var nickname = document.getElementById('nickname').value;
-      var  user = new User(email, password, phone, birthdate, firstname, lastname, middlename, nickname,'user');
-      localStorage.setItem('username', user.nickname);
-      localStorage.setItem('role', user.role);
-      users.push(user);
-      console.log(users);
-      localStorage.setItem('users', JSON.stringify(user));
-      document.getElementById('mail').value = "";
-      document.getElementById('password').value = "";
-      document.getElementById('phone').value = "";
-      document.getElementById('birthdate').value = "";
-      document.getElementById('repeatpassword').value = "";
-      document.getElementById('agreement').checked = false;
-      document.getElementById('firstname').value = "";
-      document.getElementById('lastname').value = "";
-      document.getElementById('middlename').value = "";
-      document.getElementById('nickname').value = "";
-      alert("Вы успешно зарегистрировались");
-      window.location.href = "../index-page/index_user.html";
-    });
-    
-    password.addEventListener("paste", function(e) {
-      e.preventDefault();
-    });
-    repeatpassword.addEventListener("paste", function(e) {
-      e.preventDefault();
-    });
-    
-    var inputIcon = document.querySelector(".input-icon");
-    var eyeIcon = document.getElementById("eye-icon");
-    var isPasswordVisible = false;
-    
-    inputIcon.addEventListener("click", function() {
-      if (!isPasswordVisible) {
-        password.type = "text";
+    }
+
+    passwordInput.value = generatedPassword;
+    repeatPasswordInput.value = generatedPassword;
+    passwordError.textContent = "";
+    repeatPasswordError.textContent = "";
+    passwordInput.style.borderColor = "black";
+    repeatPasswordInput.style.borderColor = "black";
+    updateSubmitButtonState();
+});
+
+// Обработчики для показа/скрытия пароля
+const inputIcon = document.querySelector(".input-icon");
+const eyeIcon = document.getElementById("eye-icon");
+let isPasswordVisible = false;
+
+inputIcon.addEventListener("click", function () {
+    if (!isPasswordVisible) {
+        passwordInput.type = "text";
         eyeIcon.src = "/images/icons8-eye-50.png";
         isPasswordVisible = true;
-      } else {
-        password.type = "password";
+    } else {
+        passwordInput.type = "password";
         eyeIcon.src = "/images/icons8-closed-eye-50.png";
         isPasswordVisible = false;
-      }
-    });
-    
-    var inputIcon2 = document.querySelector(".input-icon2");
-    var eyeIcon2 = document.getElementById("eye-icon2");
-    var isPasswordVisible2 = false;
-    
-    inputIcon2.addEventListener("click", function() {
-      if (!isPasswordVisible2) {
-        repeatpassword.type = "text";
+    }
+});
+
+const inputIcon2 = document.querySelector(".input-icon2");
+const eyeIcon2 = document.getElementById("eye-icon2");
+let isPasswordVisible2 = false;
+
+inputIcon2.addEventListener("click", function () {
+    if (!isPasswordVisible2) {
+        repeatPasswordInput.type = "text";
         eyeIcon2.src = "/images/icons8-eye-50.png";
         isPasswordVisible2 = true;
-      } else {
-        repeatpassword.type = "password";
+    } else {
+        repeatPasswordInput.type = "password";
         eyeIcon2.src = "/images/icons8-closed-eye-50.png";
         isPasswordVisible2 = false;
-      }
-    });
-  }
+    }
+});
+
+// Обработка вставки пароля
+passwordInput.addEventListener("paste", function (e) {
+    e.preventDefault();
+});
+
+repeatPasswordInput.addEventListener("paste", function (e) {
+    e.preventDefault();
+});
+});

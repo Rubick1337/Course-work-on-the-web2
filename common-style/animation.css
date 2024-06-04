@@ -66,21 +66,29 @@
         filter: brightness(1);
     }
 }
-.services
-{
-    animation:slideInLeft 1s forwards;
+.services, .green-tariff, .clients, .five-steps {
+    opacity: 0; /* Скрываем элемент до начала анимации */
+    transition: opacity 0.5s ease-out;
 }
-.green-tariff
-{
+
+.services.animate {
+    animation: slideInLeft 1s forwards;
+    opacity: 1; 
+}
+
+.green-tariff.animate {
     animation: slideInRight 1s forwards;
+    opacity: 1; 
 }
-.clients
-{
-    animation:slideInLeft 1s forwards;
+
+.clients.animate {
+    animation: slideInLeft 1s forwards;
+    opacity: 1; 
 }
-.five-steps
-{
+
+.five-steps.animate {
     animation: slideInRight 1s forwards;
+    opacity: 1; 
 }
 @keyframes slideInLeft {
     0% {
