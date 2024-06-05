@@ -1,0 +1,195 @@
+@keyframes moveArrow {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(40px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.header-btn:hover::after
+{
+    animation: moveArrow 1s forwards;
+}
+.consultation-btn:hover::after
+{
+    animation: moveArrow 1s forwards;
+}
+.navigation ul a
+{
+    transition: color 0.3s ease-in-out;
+}
+.navigation ul a:hover
+{
+    color: rgb(112, 85, 46);
+}
+.instagram-img:hover
+{
+    transform: scale(1.3);
+    animation: colorShift 3s infinite;
+    transition: transform 0.3s ease;
+}
+.telegram-img:hover
+{
+    transform: scale(1.3);
+    animation: colorShift 3s infinite;
+    transition: transform 0.3s ease;
+}
+.whats-up-img:hover
+{
+    transform: scale(1.3);
+    animation: colorShift 3s infinite;
+    transition: transform 0.3s ease;
+}
+.facebook-img:hover
+{
+    transform: scale(1.3);
+    animation: colorShift 3s infinite;
+    transition: transform 0.3s ease;
+}
+@keyframes colorShift {
+    0% {
+        filter: brightness(1);
+    }
+    25% {
+        filter: brightness(1.2);
+    }
+    50% {
+        filter: brightness(1.4);
+    }
+    75% {
+        filter: brightness(1.2);
+    }
+    100% {
+        filter: brightness(1);
+    }
+}
+.services, .green-tariff, .clients, .five-steps {
+    opacity: 0; 
+    transition: opacity 0.5s ease-out;
+}
+
+.services.animate {
+    animation: slideInLeft 1s forwards;
+    opacity: 1; 
+}
+
+.green-tariff.animate {
+    animation: slideInRight 1s forwards;
+    opacity: 1; 
+}
+
+.clients.animate {
+    animation: slideInLeft 1s forwards;
+    opacity: 1; 
+}
+
+.five-steps.animate {
+    animation: slideInRight 1s forwards;
+    opacity: 1; 
+}
+main
+{
+    overflow: hidden;
+}
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slidebottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .text-contacts a 
+  {
+    transition: all 0.3s ease-in-out;
+  }
+  .text-contacts a:hover
+  {
+    color:rgb(166, 110, 41);
+  }
+  #submit
+  {
+    transition: transform 0.3s ease-in-out; 
+  }
+  #submit:hover {
+    transform: scale(1.1); 
+}
+#login-form
+{
+    animation: slideInRight 1s forwards;
+}
+#registration-form
+{
+    animation: slideInRight 1s forwards;
+}
+.panels
+{
+    animation: slideInLeft 1s forwards;
+}
+.users
+{
+    animation: slideInLeft 1s forwards;
+}
+
+.slider-tarrif {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-slider-tarrif {
+    transform: translateX(-20%);
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+}
+.text-slider
+{
+    transform: translateX(20%);
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+}
+.img-slider-tarrif.show, .text-slider.show {
+    transform: translateX(0);
+}
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-clients {
+    opacity: 0;
+    transform: translateX(-20%);
+    transition: opacity 0.4s ease-in-out, transform 1s ease-in-out;
+}
+.info-clients
+{
+    opacity: 0;
+    transform: translateX(20%);
+    transition: opacity 0.4s ease-in-out, transform 1s ease-in-out;
+}
+.img-clients.show, .info-clients.show {
+    opacity: 1; 
+    transform: translateX(0);
+}

@@ -1,0 +1,271 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden !important;
+  background-image: url("../images/Rectangle13.png");
+}
+.flex-direction {
+  display: flex;
+  flex-direction: column;
+}
+.img-profile-burger {
+  display: none;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  margin-left: 47px;
+  gap: 22px;
+}
+.buttons-burger {
+  display: none;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 96px;
+  height: 36px;
+}
+.switch-input {
+  display: none;
+}
+.switch-slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: #fff;
+  transition: 0.3s ease background-color;
+  border-radius: 56px;
+  transition: 0.4s ease-in-out;
+}
+.switch-slider::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 32px;
+  height: 32px;
+  background-color: #fafd0f;
+  border-radius: 50%;
+  animation: slide-up-sun 700ms ease-in-out forwards;
+}
+.switch-input:focus + .switch-slider {
+  box-shadow: 0 0 3px #000;
+}
+.switch-input:checked + .switch-slider {
+  background-color: #000;
+}
+.switch-input:checked + .switch-slider::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 52px;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  box-shadow: 6px 2px 1px 5px white;
+  border-radius: 50%;
+  animation: slide-up-moon 700ms;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropbtn {
+  width: 73px;
+  height: 24px;
+  background-image: url(../images/Russia-Flag-icon.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background-position: left;
+}
+.dropbtn::after {
+  content: "";
+  background: rgba(0, 0, 0, 0) url(../images/745173.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 5px;
+  right: -2px;
+  width: 16px;
+  height: 16px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  background-color: #e8e6e6;
+  width: 73px;
+}
+.dropdown-content button {
+  color: black;
+  padding: 2px 0 2px 25px;
+  text-decoration: none;
+  transition: background-color 0.5s ease-in-out;
+  border: 0px;
+  cursor: pointer;
+}
+.dropdown-content button:first-child {
+  background: url(../images/Russia-Flag-icon.png) no-repeat left center;
+}
+.dropdown-content button:last-child {
+  background: url(../images/flag-usa-icon.png) no-repeat left center;
+}
+.header-container {
+  position: relative;
+    height: 473px;
+  width: 100%;
+}
+.background-settings {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img-profile {
+    margin-right: 39px;
+  width: 48px;
+  height: 48px;
+  background-image: url(../images/icon_profile.svg);
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 77px;
+  right: 10px;
+  width: 172px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.login-register-menu {
+  display: block;
+}
+.user-menu {
+  display: none;
+  gap: 5px;
+  flex-direction: column;
+  align-items: center;
+}
+.user-menu-header {
+  display: none;
+  gap: 5px;
+  flex-direction: column;
+  align-items: center;
+}
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+}
+.hidden
+{
+  display: none;
+}
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+.dropdown-menu-burger {
+  display: none;
+  width: 140px;
+  position: absolute;
+  top: 331px;
+  right: 0px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dropdown-menu-burger a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-menu-burger a:hover {
+  background-color: #f0f0f0;
+}
+.img-logo {
+  width: 182px;
+  height: 51px;
+  background-image: url(../images/лого1.svg);
+}
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  padding-top: 20px;
+  transition: background-color 1s ease-in-out;
+}
+.navigation ul {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  list-style-type: none;
+  margin-block: 0;
+  padding-inline-start: 0;
+}
+.user {
+    gap: 100px;
+  display: flex;
+  width: 506px;
+  height: 131px;
+  align-items: center;
+  flex-shrink: 0;
+  background: #7d92c8;
+}
+.img-user {
+  background-image: url("../images/image4.png");
+  width: 120px;
+  height: 120px;
+}
+.container-users {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+    gap: 200px;
+}
+.group-users {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 41px;
+  padding-bottom: 71px;
+}
+body.dark-theme .user span 
+{
+  color: #000;
+}
+body.dark-theme .title-users h2
+{
+  color: #aaa;
+} 
+.user span
+{
+    color: #ffffff;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.hidden
+{
+  display: none;
+}

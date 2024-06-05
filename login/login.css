@@ -1,0 +1,71 @@
+.login
+{
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 30px;
+}
+.header-container
+{
+    position: relative;
+    height: 1000px;
+    filter: brightness(0.9);
+}
+.form-login
+{
+  background: #00000085;
+}
+body.dark-theme span {
+    color:#000;
+  }
+.form-login
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-login input
+{
+    width: 280px;
+    border-radius: 10px;
+    border: 3.5px solid #000; 
+}
+
+#submit
+{
+    height: 39px;
+    background: burlywood;
+}
+
+.custom-input {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .custom-input .input-icon {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+  }
+  
+  .custom-input .input-icon img {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+  
+  input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-clear-button,
+input[type="password"]::-webkit-inner-spin-button,
+input[type="password"]::-webkit-outer-spin-button,
+input[type="password"]::-webkit-textfield-decoration-container {
+    display: none;
+}

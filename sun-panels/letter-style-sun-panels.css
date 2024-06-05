@@ -1,0 +1,90 @@
+h1,
+h2,
+h3,
+h4 {
+  margin-block: 0;
+}
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6 {
+  color: #fff;
+}
+.navigation a {
+  color: black;
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  text-decoration: none;
+}
+.title-header 
+{
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 47px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+}
+.title-panel h2
+{
+    text-align: center;
+    color: #000;
+font-family: Inter;
+font-size: 37px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+word-wrap: break-word;
+}
+.products-count h3
+{
+    color: #787777;
+text-align: center;
+font-family: Inter;
+font-size: 37px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.after-application h3
+{
+  color: #FFF;
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.title-application h2
+{
+color:  #FFF;
+font-family: "Noto Sans", sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.consultation-footer h2 {
+  color: #ffffff;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer-container-admin h2
+{
+  color: #ffffff;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

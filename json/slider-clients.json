@@ -1,0 +1,70 @@
+{
+    "en": {
+      "client-1": {
+        "img": "../images/Rectangle11.jpg",
+        "title": "30 kW Solar Power Plant Connected Under the Green Tariff",
+        "local": "Location: Kharkiv Oblast, Kharkiv",
+        "income": "Net income after taxes from May 2017 to May 2019: $13,900",
+        "date": "Installed: April 2017",
+        "life": "Service life: 25-30 years"
+      },
+      "client-2": {
+        "img": "../images/Rectangle14.jpg",
+        "title": "12 kW Solar Power Plant Connected Under the Green Tariff",
+        "local": "Location: Dnipropetrovsk Oblast, Dnipro",
+        "income": "Net income after taxes from May 2021 to May 2022: $8,900",
+        "date": "Installed: April 2021",
+        "life": "Service life: 25-30 years"
+      },
+      "client-3": {
+        "img": "../images/Rectangle15.jpg",
+        "title": "20 kW Solar Power Plant Connected Under the Green Tariff",
+        "local": "Location: Kyiv Oblast, Kyiv",
+        "income": "Net income after taxes from May 2019 to May 2020: $11,100",
+        "date": "Installed: April 2019",
+        "life": "Service life: 25-30 years"
+      },
+      "client-4": {
+        "img": "../images/Rectangle16.jpg",
+        "title": "15 kW Solar Power Plant Connected Under the Green Tariff",
+        "local": "Location: Zhytomyr Oblast, Zhytomyr",
+        "income": "Net income after taxes from May 2020 to May 2021: $12,100",
+        "date": "Installed: April 2020",
+        "life": "Service life: 25-30 years"
+      }
+    },
+    "ru":  {
+        "client-1": {
+            "img": "../images/Rectangle11.jpg",
+            "title": "Солнечная электростанция 30 кВт подключенная по Зеленому Тарифу",
+            "local": "Расположение: Харьковская обл., г. Харьков",
+            "income": "Чистый доход за вычетом налогов с мая 2017 г. по май 2019 г. 13 900 $.",
+            "date": "Смонтирована: апрель 2017 г.",
+            "life": "Срок службы: 25-30 лет"
+          },
+          "client-2": {
+            "img": "../images/Rectangle14.jpg",
+            "title": "Солнечная электростанция 12 кВт подключенная по Зеленому Тарифу",
+            "local": "Расположение: Днепропетровская область обл., г. Днепр",
+            "income": "Чистый доход за вычетом налогов с мая 2021 г. по май 2022 г. 8 900 $.",
+            "date": "Смонтирована: апрель 2021 г.",
+            "life": "Срок службы: 25-30 лет"
+          },
+          "client-3": {
+            "img": "../images/Rectangle15.jpg",
+            "title": "Солнечная электростанция 20 кВт подключенная по Зеленому Тарифу",
+            "local": "Расположение: Киевская обл., г. Киев",
+            "income": "Чистый доход за вычетом налогов с мая 2019 г. по май 2020 г. 11 100 $.",
+            "date": "Смонтирована: апрель 2019 г.",
+            "life": "Срок службы: 25-30 лет"
+          },
+          "client-4": {
+            "img": "../images/Rectangle16.jpg",
+            "title": "Солнечная электростанция 15 кВт подключенная по Зеленому Тарифу",
+            "local": "Расположение: Житомирская обл., г. Житомир",
+            "income": "Чистый доход за вычетом налогов с мая 2020 г. по май 2021 г. 12 100 $.",
+            "date": "Смонтирована: апрель 2020 г.",
+            "life": "Срок службы: 25-30 лет"
+          }
+    }
+}

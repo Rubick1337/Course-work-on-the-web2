@@ -1,0 +1,298 @@
+h1,
+h2,
+h3,
+h4 {
+  margin-block: 0;
+}
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6 {
+  color: #fff;
+}
+body.dark-theme .tab label {
+  color: #fff;
+}
+body.dark-theme .text-contacts a 
+{
+  color: #fff;
+}
+.navigation a {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  text-decoration: none;
+}
+.Text-header h3 { 
+  color: #ffffff;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 19px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.Text-header h1 {
+  color: #fff;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.modal-content h2
+{
+  text-align: center;
+}
+.Text-header h2 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.consultation h2, .consultation-footer h2 {
+  color: #ffffff;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.title-services h2 , .title-green h2,.title-clients h2, .title-steps h2{
+    color: #868585;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .text-1 h2 {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .text-1 h3 {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .tab label {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .text-slider h2 {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .text-info h2 {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .text-info h3 {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .text-right-green {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .text-quote h2 {
+    color: #fff;
+    text-align: center;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .title-client h2 {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .info-client h3 {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .consultation-black h2 {
+    color: black;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .text-1-steps h4 {
+    color: #868585;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .text-1-steps h2 {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .text-1-steps h3 {
+    color: #303030;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .form-group label[for="phone"],.form-group label[for="name"] {
+    color:#FFF;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.title-application h2
+{
+color:  #FFF;
+font-family: "Noto Sans", sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.text-contacts h2 {
+  color: #100;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.text-contacts a {
+  color: #100;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+.telephone h2 {
+  color: #100;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.after-application h3
+{
+  color: #FFF;
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+#registration-form label,#login-form label {
+  color: #ffffff;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#registration-form span,#login-form span
+{
+  color: #f40808;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.registration h1,.login h1
+{
+  color: #ffffff;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#registration-form input,#login-form
+{
+  color: #100;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer-container-admin h2
+{
+  color: #ffffff;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.title-users h2
+{
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 76px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+}

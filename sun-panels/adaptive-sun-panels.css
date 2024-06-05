@@ -1,0 +1,249 @@
+@media screen and (max-width: 1180px) {
+  .group-burger-profile {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    z-index: 2;
+  }
+  .burger-menu {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    z-index: 2;
+    position: relative;
+  }
+  .line-burger {
+    width: 38px;
+    height: 2px;
+    background: #000;
+  }
+header
+{
+  overflow: hidden;
+}
+
+.navigation {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  left: auto;
+  bottom: 0;
+  width: 320px;
+  height: 485px;
+  background-color: #e2d7d7;
+  z-index: 2;
+  animation: burgerAnimation 0.5s ease-in-out;
+  transition-duration: .75s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.line-burger-section
+{
+  width: 222px;
+  height: 2px;
+  background: #000;
+}
+.buttons-burger
+{
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.navigation.dark-theme
+{
+  background-color: #5c5555;
+}
+.navigation a {
+  color: #0c0c0c;
+}
+  .open-overlay
+  {
+    visibility: visible !important;
+  }
+  .open {
+    visibility: visible !important;
+    right: 0 !important;
+    left: auto !important;
+}
+  .overlay
+  {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  @keyframes burgerAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .navigation ul {
+    flex-direction: column;
+    gap: 10px;
+}
+  .burger-menu.active span:nth-child(2) {
+    transform: scale(0);
+    transition: transform 0.3s ease;
+  }
+  .burger-menu.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-27%, 50%);
+    transition: transform 0.3s ease;
+  }
+  .burger-menu.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-19%, 50%);
+    transition: transform 0.3s ease;
+  }
+  .panels
+  {
+    padding: 205px 90px;
+    gap: 44px;
+  }
+  @media screen and (max-width: 767px) {
+    .img-profile {
+      display: none;
+    }
+    .img-profile-burger {
+      display: block;
+      margin-right: 20px;
+      width: 48px;
+      height: 48px;
+      background-image: url(../images/icon_profile_black.svg);
+    }
+    .group-burger-profile {
+      margin-right: 19px;
+    }
+    .img-logo {
+      margin-left: 20px;
+    }
+    .Text-header h2 {
+      width: auto;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="tel"] {
+      width: 300px;
+    }
+    .application-container
+    {
+        width: 90%;
+    }
+    .application
+    {
+        width: 100%;
+    }
+    .footer-container-admin h2 
+    {
+      font-size: 32px;
+    }
+    .form-group input[type="text"]
+    {
+        width: 91%;
+    }
+    .after-application
+    {
+        flex-direction: column;
+        width: 88%;
+    }
+    .container-social-footer
+    {
+        justify-content: normal;
+    }
+    .img-application
+    {
+        display: none;
+    }
+    .background-footer
+    {
+        height: 749px;
+    }
+    .form-group input[type="text"],.form-group input[type="tel"]
+    {
+        width: 97%;
+    }
+    .footer-container
+    {
+        gap: 145px; 
+    }
+    .panels
+    {
+        padding: 207px 5px;
+        gap: 47px;
+    }
+    .group-panel
+    {
+        width: 310px;
+        height: 479px;
+        gap: 10px;
+    }
+    .img-panel-1
+{
+    width: 230px;
+    height: 182px;
+}
+.img-panel-2
+{
+    width: 230px;
+    height: 206px;
+}
+.img-panel-3
+{
+    width: 230px;
+    height: 245px;
+}
+.img-panel-4
+{
+    width: 230px;
+    height: 246px;
+}
+.img-panel-5
+{
+
+    width: 230px;
+    height: 267px;
+}
+.img-panel-6
+{
+    width: 230px;
+    height: 179px;
+}
+.img-panel-7
+{
+    width: 230px;
+    height: 267px;
+}
+.img-panel-8
+{
+    background-image:url(../images/image312.png);   
+    width: 259px;
+    height: 267px;
+}
+.header-container
+{
+    height: 428px;
+}
+.title-panel
+{
+    width: 300px;
+}
+  }
+  @media screen and (max-width:560px) {
+    .buttons {
+        display: none;
+      }
+      .title-panel
+      {
+        width: 222px;
+      }
+      .footer-container-admin h2 
+      {
+        font-size: 22px;
+      }
+  }
+}

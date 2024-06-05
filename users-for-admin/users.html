@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar</title>
+    <link rel="stylesheet" href="../users-for-admin/style-users.css" />
+    <link rel="stylesheet" href="../common-style/letter-style.css" />
+    <link rel="stylesheet" href="../common-style/animation.css" />
+    <link rel="stylesheet" href="../users-for-admin/adaptive-users.css"/> 
+  </head>
+<body class="background-settings">
+    <header>
+        <div class="header-container background-settings">
+          <div class="menu">
+              <div class="buttons">
+                  <label class="switch">
+                    <input type="checkbox" class="switch-input" />
+                    <span class="switch-slider"></span>
+                  </label>
+                  <div class="moon"></div>
+                  <div class="dropdown">
+                    <button class="dropbtn" type="button">
+                      RU
+                    </button>
+                    <div class="dropdown-content">
+                      <button class="language-btn" type="button" id="button-ru">
+                        RU
+                      </button>
+                      <button class="language-btn" type="button" id="button-en">
+                        EN
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div class="img-logo background-settings"></div> 
+              <nav class="navigation">
+                <div class="line-burger-section"></div>
+                <ul>
+                  <li><a href="../index-page/index_user.html#services-navigation" data-i18n="services">Услуги</a></li>
+                  <li><a href="../index-page/index_user.html#green-tariff-navigation" data-i18n="green_tariff_header">Зеленый тариф</a></li>
+                  <li><a href="../index-page/index_user.html#clients-navigation" data-i18n="our_clients_header">Наши клиенты</a></li>
+                  <li class="hide-for-admin-steps"><a href="../index-page/index_user.html#five-steps-navigation" data-i18n="power_station_header">Электростанция</a></li>
+                  <li class="for-admin-users"><a href="../users-for-admin/users.html" data-i18n="user">Пользователи</a></li>
+                </ul>
+                <div class="line-burger-section"></div>
+                <div class="buttons-burger">
+                  <label class="switch">
+                    <input type="checkbox" class="switch-input" />
+                    <span class="switch-slider"></span>
+                  </label>
+                  <div class="moon"></div>
+                  <div class="dropdown">
+                    <button class="dropbtn" type="button">
+                      RU
+                    </button>
+                    <div class="dropdown-content">
+                      <button class="language-btn" type="button" id="button-ru-burger">
+                        RU
+                      </button>
+                      <button class="language-btn" type="button" id="button-en-burger">
+                        EN
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div class="img-profile-burger"></div>
+              <div class="img-profile-admin-burger hidden"> </div>  
+            <div id="dropdownMenuBurgers" class="dropdown-menu-burger">
+              <div class="login-register-menu">
+                <a href="../login/login.html">Login</a>
+                <a href="../registration/registration.html">Register</a>
+            </div>
+            <div class="user-menu">
+                <span>Welcome, <span class="username-display"></span>!</span>  
+                <button id="logoutButton">Log out</button>
+            </div>
+            </div>
+              </nav>
+              <div class="group-burger-profile">
+                <div class="burger-menu">
+                  <span class="line-burger"></span>
+                  <span class="line-burger"></span>
+                  <span class="line-burger"></span>
+                </div>
+                <div class="img-profile background-settings"></div>
+                <div class="img-profile-admin hidden"></div>  
+                <div id="dropdownMenu" class="dropdown-menu">
+                  <div class="login-register-menu-header">
+                    <a href="../login/login.html">Login</a>
+                    <a href="../registration/registration.html">Register</a>
+                </div>
+                <div class="user-menu-header">
+                    <span>Welcome, <span class="username-display-header"></span>!</span> 
+                    <button id="logoutButton-header">Log out</button>
+                </div>
+              </div>
+              </div>
+              </div>
+        </div>      
+      </header>
+      <main>
+        <div class="overlay"></div>
+        <section class="users">
+            <div class="container-users">
+                <div class="title-users">
+                    <h2 data-i18n="register-users">Зарегистрированные пользователи</h2>
+                </div>
+                <div class="group-users">
+
+                    <div class="user">
+                        <div class="img-user background-settings"></div>
+                        <span id="1-user" class="usernick"></span>
+                    </div>
+                    <div class="user">
+                        <div class="img-user background-settings"></div>
+                        <span id="2-user" class="usernick"></span>
+                    </div>
+                    <div class="user">
+                        <div class="img-user background-settings"></div>
+                        <span id="3-user" class="usernick"></span>
+                    </div>
+                    <div class="user">
+                        <div class="img-user background-settings"></div>
+                        <span id="4-user" class="usernick"></span>
+                    </div>
+                    <div class="user">
+                        <div class="img-user background-settings"></div>
+                        <span id="5-user" class="usernick"></span>
+                    </div>
+                    <div class="user">
+                        <div class="img-user background-settings"></div>
+                        <span id="6-user" class="usernick"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </main>
+      <script src="/js_files/users-output.js"></script>
+      <script src="/js_files/dark-light-theme.js"></script>
+      <script src="/js_files/toogle-language.js"></script>
+      <script src="/js_files/translate.js"></script>
+      <script src="/js_files/dropmenu-profile.js"></script>
+      <script src="/js_files/swap-menu.js"></script>
+      <script src="/js_files/links-admin.js"></script>
+      <script src="/js_files/burger.js"></script>
+</body>
+</html>
