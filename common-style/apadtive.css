@@ -3,6 +3,12 @@
     width: 100%;
   }
 }
+@media screen and(max-width:1447px) {
+  .container-contacts-info
+  {
+    gap: 300px;
+  }
+}
 @media screen and (max-width: 1408px) {
   .container-services {
     width: 94.45%;
