@@ -1,1 +1,1 @@
-# Course-work-on-the-web2
+https://Rubick1337.github.io/solar/index-page/index_user.html
