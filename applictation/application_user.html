@@ -148,16 +148,17 @@
               </div>
               <div class="form-group">
                 <input type="text" id="discovery" name="discovery" required>
-                <label for="discovery" data-i18n="name">Самовывоз(Если требуется):</label>
+                <label for="discovery" data-i18n="name-discovery">Самовывоз(Если требуется):</label>
               </div>
               <div class="form-group">
                 <input type="text" id="tariff" name="tariff" required>
                 <label for="tariff" data-i18n="tariff">Тариф:</label>
               </div>
               <div class="consultation-footer">
-                <div class="header-btn"></div>
+                <div class="header-btn" id="submit-btn"></div>
                 <h2 data-i18n="leave_application">оставить заявку</h2>
               </div>
+              <div id="error-message" style="color: red; display: none;"></div>
             </form>
             <div class="img-application background-settings"></div>
           </div>
@@ -182,5 +183,6 @@
       <script src="/js_files/swap-menu.js"></script>
       <script src="/js_files/admin-section-without-footer.js"></script>
       <script src="/js_files/burger.js"></script>
+      <script src="/js_files/order.js"></script>
 </body>
 </html>

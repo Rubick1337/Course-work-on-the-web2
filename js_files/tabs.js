@@ -8,5 +8,6 @@ tabs.forEach(function(tab, index) {
     });
     console.log(index);
     descriptions[index].style.display = 'block';
+    console.log(descriptions[index]);
   });
 });

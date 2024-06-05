@@ -67,7 +67,7 @@
     }
 }
 .services, .green-tariff, .clients, .five-steps {
-    opacity: 0; /* Скрываем элемент до начала анимации */
+    opacity: 0; 
     transition: opacity 0.5s ease-out;
 }
 
@@ -89,6 +89,10 @@
 .five-steps.animate {
     animation: slideInRight 1s forwards;
     opacity: 1; 
+}
+main
+{
+    overflow: hidden;
 }
 @keyframes slideInLeft {
     0% {

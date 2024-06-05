@@ -366,6 +366,7 @@ header
     .container-cleints {
       height: 968px;
     }
+
     .clients {
       height: 1079px;
     }
@@ -374,7 +375,9 @@ header
       justify-content: center;
       align-items: center;
     }
-
+    .pagination {
+      width: 206px;
+  }
     .title-client {
       width: 310px;
     }
@@ -442,5 +445,19 @@ header
     {
       font-size: 22px;
     }
+    .pagination {
+      width: 130px;
+  }
+
+.pangination button
+{
+  width: 53px;
+}
+  }
+  @media screen and (max-width: 352px) {
+    #text-slider {
+      width: 8%;
+  }
   }
 }
+

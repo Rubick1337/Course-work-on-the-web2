@@ -127,7 +127,7 @@
             <h2 data-i18n="sale-text">Оставьте заявку на солнечные панели с 30% скидкой!</h2>
             <h3 data-i18n="information-text">Здесь можно разместить форму заявки или дополнительную информацию.</h3>
             <div class="consultation-black">
-              <div class="consultation-btn"></div>
+              <div class="consultation-btn" id="modallink"></div>
               <h2 data-i18n="consultation">записаться на консультацию</h2>
             </div>
         </div>
@@ -209,8 +209,41 @@
               </div>
             </div>
           </div>
-          <div id="description-2" class="description" data-i18n="content_for_fixation">Содержимое для закрепления</div>
-          <div id="description-3" class="description" data-i18n="content_for_restrictions">Содержимое для ограничений</div>
+          <div id="description-2" class="description">
+            <div class="slider-tarrif">
+              <div class="left-slider-green">
+                  <div id="img-slider-tarrif" class="img-slider-tarrif background-settings"></div>
+                  <div class="pagination">
+                    <button id="prev-slide"> &laquo; Previous</button>
+                    <span id="page-info"></span>
+                    <button id="next-slide"> Next &raquo;</button>
+                </div>
+              </div>
+              <div class="right-slider-green">
+                  <div id="text-slider" class="text-slider">
+                      <h2 data-i18n="price">Цена, по которой домохозяйства могут продать электроэнергию, более чем в 10 раз превышает цену, по которой они ее покупают для своих нужд— 0,16 Евро/кВт (продажа).</h2>
+                  </div>
+              </div>
+          </div>
+            <div class="block-info flex-direction">
+              <div class="text-info flex-direction">
+                <h2 data-i18n="purchase_guarantee">Гарантия выкупа</h2>
+                <h3 data-i18n="purchase_guarantee_description">Гарантированный выкуп электроэнергии государством - прописано в НКРЕ №447</h3>
+              </div>
+              <div class="text-info flex-direction">
+                <h2 data-i18n="long_term">Долгосрочно</h2>
+                <h3 data-i18n="long_term_description">это проект, поддерживаемый международными инвестиционными организациями</h3>
+              </div>
+              <div class="text-info flex-direction">
+                <h2 data-i18n="investment_type">Вид вложения</h2>
+                <h3 data-i18n="investment_type_description">Альтернатива банковским депозитам, окупаемость - от 16% до 18% годовых</h3>
+              </div>
+              <div class="text-info flex-direction">
+                <h2 data-i18n="high_rate">Высокая ставка</h2>
+                <h3 data-i18n="high_rate_description">Самая высокая тарифная ставка в европе - 0,16 евро</h3>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="rigth-green flex-direction">
           <div class="text-right-green">
@@ -397,4 +430,5 @@
     <script src="/js_files/swap-menu.js"></script>
     <script src="/js_files/admin-section.js"></script>
     <script src="/js_files/scroll.js"></script>
+    <script src="/js_files/pangination.js"></script>
   </body>

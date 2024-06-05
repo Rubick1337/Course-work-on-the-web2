@@ -797,6 +797,29 @@ body.dark-theme span {
 {
   background-color:#000;
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button {
+  color: #007bff;
+  flex-shrink: 0;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+#text-slider
+{
+    width: 83%;
+
+}
+.pagination button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
 #close-btn {
   position: absolute;
   right: 19px;

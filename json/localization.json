@@ -242,6 +242,11 @@
           "en": "Name:",
           "ru": "Имя:"
         },
+        "name-discovery":
+        {
+          "en": "discovery(if you need)",
+          "ru": "Самовывоз(Если требуется)"
+        },
         "privacy_policy": {
           "en": "Privacy Policy:",
           "ru": "Политика <br> конфиденциальности:"
