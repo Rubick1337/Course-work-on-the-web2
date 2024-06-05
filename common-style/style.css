@@ -816,6 +816,10 @@ body.dark-theme span {
     width: 83%;
 
 }
+#page-info.dark-theme
+{
+ color:#fff;
+}
 .pagination button:hover {
   background-color: #007bff;
   color: #fff;
