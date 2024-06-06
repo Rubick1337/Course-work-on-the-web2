@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   var tariffs;
   const lang = getLanguage();
-  fetch('/json/slider-green-tariff.json')
+  fetch('../json/slider-green-tariff.json')
     .then(response => {
       if (!response.ok) {
         throw new Error('Ой, ошибка в fetch: ' + response.statusText);

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   var clients;
   const lang = getLanguage();
-  fetch('/json/slider-clients.json')
+  fetch('../json/slider-clients.json')
     .then(response => {
       if (!response.ok) {
         throw new Error('Ой, ошибка в fetch: ' + response.statusText);

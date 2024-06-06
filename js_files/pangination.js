@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const lang = getLanguage();
     console.log("Language:", lang);
 
-    fetch('/json/Pangination.json')
+    fetch('../json/Pangination.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Ой, ошибка в fetch: ' + response.statusText);

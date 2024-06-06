@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
   dropbtns.forEach(dropbtn => {
     if (lang == "en") {
       dropbtn.textContent = "EN";
-      dropbtn.style.backgroundImage = 'url("/images/flag-usa-icon.png")';
+      dropbtn.style.backgroundImage = 'url("../images/flag-usa-icon.png")';
     } else if (lang == "ru") {
       dropbtn.textContent = "RU";
-      dropbtn.style.backgroundImage = 'url("/images/Russia-Flag-icon.png")';
+      dropbtn.style.backgroundImage = 'url("../images/Russia-Flag-icon.png")';
     }
 
     dropbtn.addEventListener("click", function () {
@@ -37,10 +37,10 @@ document.addEventListener("DOMContentLoaded", function () {
     dropbtns.forEach(dropbtn => {
       if (selectedLang === "EN") {
         dropbtn.textContent = "EN";
-        dropbtn.style.backgroundImage = 'url("/images/flag-usa-icon.png")';
+        dropbtn.style.backgroundImage = 'url("../images/flag-usa-icon.png")';
       } else if (selectedLang === "RU") {
         dropbtn.textContent = "RU";
-        dropbtn.style.backgroundImage = 'url("/images/Russia-Flag-icon.png")';
+        dropbtn.style.backgroundImage = 'url("../images/Russia-Flag-icon.png")';
       }
     });
   }
