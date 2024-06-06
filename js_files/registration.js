@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
   const lang = localStorage.getItem('lang') || 'ru';
-
   const emailInput = document.getElementById('mail');
   const phoneInput = document.getElementById('phone');
   const birthdateInput = document.getElementById('birthdate');
@@ -12,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const nicknameInput = document.getElementById('nickname');
   const agreementCheckbox = document.getElementById('agreement');
   const submitButton = document.getElementById('submit');
-
+  submitButton.disabled
+ console.log(submitButton)
   const emailError = document.getElementById('mailError');
   const phoneError = document.getElementById('phoneError');
   const birthdateError = document.getElementById('birthdateError');
@@ -300,8 +300,8 @@ function updateSubmitButtonState() {
         firstNameInput,
         lastNameInput,
         nicknameInput
-    ].every(input => !input.classList.contains('error'));
-
+    ].every(input => input.value.trim() !== '' && !input.classList.contains('error'));
+    console.log(isFormValid)
     submitButton.disabled = !isFormValid || !agreementCheckbox.checked;
 }
 
@@ -375,7 +375,7 @@ submitButton.addEventListener('click', function () {
         };
 
         users.push(user);
-        localStorage.setItem('users', JSON.stringify(users));
+        localStorage.setItem('users', JSON.stringify(user));
         localStorage.setItem('username', user.nickname);
         localStorage.setItem('role', user.role);
 
@@ -515,7 +515,7 @@ inputIcon2.addEventListener("click", function () {
 
 // Обработка вставки пароля
 passwordInput.addEventListener("paste", function (e) {
-    e.preventDefault();
+    e.preventDefault(); 
 });
 
 repeatPasswordInput.addEventListener("paste", function (e) {

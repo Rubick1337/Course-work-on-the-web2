@@ -2,7 +2,7 @@
 {
   position: relative;
     height: 435px;
-    background:url(/images/Frame44.png)
+    background:url(../images/Frame44.png)
 }
 .modal {
   display: none;
@@ -284,7 +284,7 @@ flex-wrap: wrap;
 }
 .background-footer
 {
-  background-image:url(/images/Rectangle13.png);
+  background-image:url(../images/Rectangle13.png);
   height:801px;
 }
 .footer-container
@@ -334,7 +334,7 @@ flex-wrap: wrap;
 }
 .img-application
 {
-  background-image:url(/images/image1.png);
+  background-image:url(../images/image1.png);
   width: 718px;
   height: 437px;
 }
@@ -502,6 +502,6 @@ flex-wrap: wrap;
 }
 .background-footer-admin
 {
-  background-image:url(/images/Rectangle13.png);
+  background-image:url(../images/Rectangle13.png);
   height:300px;
 }
