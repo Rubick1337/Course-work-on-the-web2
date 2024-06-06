@@ -3,7 +3,7 @@
     var usersjson;
     var users = [];
     const lang = localStorage.getItem('lang') || 'ru';
-    fetch('/json/users.json')
+    fetch('../json/users.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Ой, ошибка в fetch: ' + response.statusText);
@@ -62,10 +62,10 @@ function login(users) {
         const eyeIcon = document.getElementById("eye-icon-login");
         if (passwordField.type === 'password') {
             passwordField.type = 'text';
-            eyeIcon.src = '/images/icons8-eye-50.png';  // Open eye icon
+            eyeIcon.src = '../images/icons8-eye-50.png';  // Open eye icon
         } else {    
             passwordField.type = 'password';
-            eyeIcon.src = '/images/icons8-closed-eye-50.png';  // Closed eye icon
+            eyeIcon.src = '../images/icons8-closed-eye-50.png';  // Closed eye icon
         }
     });
 

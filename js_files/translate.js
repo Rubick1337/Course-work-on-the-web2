@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var langArr;
 
   // Загрузка данных локализации из JSON-файла
-  fetch('/json/localization.json')
+  fetch('../json/localization.json')
     .then(response => {
       if (!response.ok) {
         throw new Error('Ой, ошибка в fetch: ' + response.statusText);

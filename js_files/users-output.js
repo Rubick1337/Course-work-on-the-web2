@@ -2,7 +2,7 @@ var userslocal = JSON.parse(localStorage.getItem('users')) || []; // Предп�
 var usersjson;
 var users = [];
 
-fetch('/json/users.json')
+fetch('../json/users.json')
   .then(response => {
     if (!response.ok) {
       throw new Error('Ой, ошибка в fetch: ' + response.statusText);

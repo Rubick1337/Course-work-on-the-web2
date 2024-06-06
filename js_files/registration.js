@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const userslocal = JSON.parse(localStorage.getItem('users')) || [];
   let users = [];
 
-  fetch('/json/users.json')
+  fetch('../json/users.json')
       .then(response => response.json())
       .then(jsonData => {
           users = jsonData.concat(userslocal);
@@ -488,11 +488,11 @@ let isPasswordVisible = false;
 inputIcon.addEventListener("click", function () {
     if (!isPasswordVisible) {
         passwordInput.type = "text";
-        eyeIcon.src = "/images/icons8-eye-50.png";
+        eyeIcon.src = "../images/icons8-eye-50.png";
         isPasswordVisible = true;
     } else {
         passwordInput.type = "password";
-        eyeIcon.src = "/images/icons8-closed-eye-50.png";
+        eyeIcon.src = "../images/icons8-closed-eye-50.png";
         isPasswordVisible = false;
     }
 });
@@ -504,11 +504,11 @@ let isPasswordVisible2 = false;
 inputIcon2.addEventListener("click", function () {
     if (!isPasswordVisible2) {
         repeatPasswordInput.type = "text";
-        eyeIcon2.src = "/images/icons8-eye-50.png";
+        eyeIcon2.src = "../images/icons8-eye-50.png";
         isPasswordVisible2 = true;
     } else {
         repeatPasswordInput.type = "password";
-        eyeIcon2.src = "/images/icons8-closed-eye-50.png";
+        eyeIcon2.src = "../images/icons8-closed-eye-50.png";
         isPasswordVisible2 = false;
     }
 });
