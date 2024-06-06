@@ -556,7 +556,7 @@ body {
     height: 38px;
   }
   .img-steps {
-    background-image: url(/images/Rectangle12.png);
+    background-image: url(../images/Rectangle12.png);
     width: 573px;
     height: 604px;
   }
@@ -634,12 +634,12 @@ body.dark-theme .line-section {
 
 .background-footer
 {
-  background-image:url(/images/Rectangle13.png);
+  background-image:url(../images/Rectangle13.png);
   height:801px;
 }
 .background-footer-admin
 {
-  background-image:url(/images/Rectangle13.png);
+  background-image:url(../images/Rectangle13.png);
   height:300px;
 }
 .footer-container
@@ -698,7 +698,7 @@ body.dark-theme .line-section {
 }
 .img-application
 {
-  background-image:url(/images/image1.png);
+  background-image:url(../images/image1.png);
   width: 718px;
   height: 437px;
 }

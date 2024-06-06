@@ -228,7 +228,7 @@ body {
 
 .background-footer
 {
-  background-image:url(/images/Rectangle13.png);
+  background-image:url(../images/Rectangle13.png);
   height: 1749px;
 }
 .footer-container
@@ -279,7 +279,7 @@ body {
 }
 .img-application
 {
-  background-image:url(/images/image1.png);
+  background-image:url(../images/image1.png);
   width: 72%;
     height: 437px;
 }

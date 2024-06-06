@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (tariffs) {
             const totalSlides = Object.keys(tariffs).length;
             const pageInfo = document.getElementById('page-info');
-            pageInfo.textContent = `Page ${currentClientIndex} of ${totalSlides}`;
+            pageInfo.textContent = `${currentClientIndex}/${totalSlides}`;
         }
     }
 
