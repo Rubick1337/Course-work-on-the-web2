@@ -23,7 +23,7 @@ function init() {
     },
     {
       iconLayout: "default#image",
-      iconImageHref: "/images/marker.png",
+      iconImageHref: "../images/marker.png",
       iconImageSize: [40, 40],
       iconImageOffset: [-20, -20],
     }
