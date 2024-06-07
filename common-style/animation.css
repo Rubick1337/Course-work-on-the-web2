@@ -193,3 +193,7 @@ main
     opacity: 1; 
     transform: translateX(0);
 }
+.info-clients.animate {
+    animation: slideInLeft 1s forwards;
+    opacity: 1;
+}

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const elements = document.querySelectorAll('.services, .green-tariff, .clients, .five-steps');
+    const elements = document.querySelectorAll('.services, .green-tariff, .clients, .five-steps, .info-clients');
 
     function checkAnimation() {
         const triggerHeight = window.innerHeight * 0.75;
