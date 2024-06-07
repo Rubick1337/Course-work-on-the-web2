@@ -1,1 +1,2 @@
-https://Rubick1337.github.io/solar/index-page/index_user.html
+https://rubick1337.github.io/Course-work-on-the-web2/index-page/index_user.html
+https://www.figma.com/design/Nna43RrXkJgo4Zqix6IM7Q/%D0%9A%D1%83%D1%80%D1%81%D0%B0%D1%87-%D0%B2%D0%B5%D0%B1?node-id=0-1&t=tuWEH86eyPLFiWuZ-1
