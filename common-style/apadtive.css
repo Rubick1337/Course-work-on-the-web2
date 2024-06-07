@@ -14,6 +14,17 @@
     width: 94.45%;
   }
 }
+@media screen and (max-width:1288px){
+  .info-client
+  {
+      margin-top: 12px;
+      gap: 14px;
+  }
+  .consultation-black
+  {
+    margin-top: 7px;
+  }
+}
 @media screen and (max-width: 1280px) {
   .container-green-tariff {
     width: 84.5%;
@@ -42,13 +53,17 @@
   .pignation-slider {
     gap: 22px;
   }
+
 }
 @media screen and (max-width: 1279px) {
   .text-right-green {
     width: 83%;
   }
-}
 
+}
+@media(max-width:1200px) {
+
+}
 @media screen and (max-width: 1187px) {
   .container-services {
     flex-direction: column;
@@ -358,6 +373,10 @@ header
     }
     .background-footer {
       height: 749px;
+    }
+    .slider
+    {
+      height: fit-content;
     }
     .form-group input[type="text"],
     .form-group input[type="tel"] {
